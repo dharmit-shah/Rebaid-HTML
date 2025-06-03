@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebaid - Thank you</title>
+
+    <!-- Master Pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+        $(function () { $("#header").load("header.html"); $("#footer").load("footer.html"); });
+    </script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- Shopping Cart -->
+    <section class="shopping_cart_component d-flex container-fluid flex-wrap g-3">
+        <!-- Left Side -->
+        <div class="shopping_cart_section thank_you_box col-md-8 pe-5 d-flex flex-column">
+            <div class="thankyou_title d-flex flex-column justify-content-between gap-3">
+                <h2 class="m-0">Thank you for your purchase</h2>
+                <p>Your order will be processed within 24 hours during working days. We will notifyyou by email once
+                    your order has been shipped.</p>
+            </div>
+
+            <!-- Order Details -->
+            <div class="order_details">
+                <h2><span class="border_dec">Ord</span>er Details</h2>
+
+                <div class="order_reference_number">
+                    <h4>Order reference number:</h4>
+                    <p>234567891</p>
+                </div>
+                <div class="order_reference_number">
+                    <h4>Order confirmation email sent to:</h4>
+                    <a href="mailto:ann_smith@gmail.com" title="ann_smith@gmail.com">ann_smith@gmail.com</a>
+                </div>
+                <div class="order_reference_number">
+                    <h4>Shipping information:</h4>
+                    <p>John Smith </p>
+                    <a href="https://maps.app.goo.gl/ZAUquYLrNaci4iPLA"
+                        title="1226 University Dr, Menlo Park, Unitas States, 94025">1226 University Dr, Menlo Park,
+                        Unitas States,
+                        <br /> 94025</a>
+                    <a href="tel:+16282679041" title="+16282679041">+16282679041</a>
+                </div>
+                <!-- Button -->
+                <div class="w-100 d-flex" id="submitBtn">
+                    <div class="form-group Click-here">
+                        <a class="ShoppingMethod_btn" title="Continue shopping">Continue shopping</a>
+                    </div>
+
+                    <div class="custom-model-main">
+                        <div class="custom-model-inner">
+                            <!-- <div class="close-btn">x</div> -->
+                            <div class="custom-model-wrap">
+                                <div class="pop-up-content-wrap">
+                                    <h2>Leave Checkout?</h2>
+                                    <p>You haven't completed your purchase. If you leave now, your cart and payment
+                                        progress may be lost.</p>
+
+                                    <div class="d-flex gap-3 justify-content-end align-items-center w-100">
+                                        <a class="cancel_checkout close-btn" href="javascript:void(0)" title="Cancel">Cancel</a>
+                                        <a class="leave_checkout" href="javascript:void(0)" title="Leave checkout">Leave checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="d-flex flex-column gap-3 col-md-4">
+            <div class="order_summery_section gap-4 d-flex flex-column">
+                <div class="gap-2 d-flex flex-column">
+                    <div class="track_order_title">
+                        <h2 class="m-0">Track your order</h2>
+                    </div>
+                    <p>You can track your package anytime using the link below: <a class="thankyou_link"
+                            href="javascript:void(0)" title="Track my order">Track my order</a></p>
+                </div>
+                <!-- Complimentary returns -->
+                <div class="gap-2 d-flex flex-column">
+                    <div class="track_order_title">
+                        <h2 class="m-0">Complimentary returns</h2>
+                    </div>
+                    <p>Now 100% satisfied? We will be happy to offer you a refund within 14 days. Exclusions apply.</p>
+                </div>
+                <!-- FAQs -->
+                <div class="gap-2 d-flex flex-column">
+                    <div class="track_order_title">
+                        <h2 class="m-0">FAQs</h2>
+                    </div>
+                    <p>Check our <a class="thankyou_link" href="javascript:void(0)"
+                            title="Frequently Asked Questions">Frequently Asked Questions</a> for information on
+                        delivery, returns and tracking your order.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- foooter -->
+    <div id="footer"></div>
+
+    <script>
+        // Click Here
+        $(".Click-here").on('click', function () {
+            $(".custom-model-main").addClass('model-open');
+        });
+        $(".close-btn, .bg-overlay").click(function () {
+            $(".custom-model-main").removeClass('model-open');
+        });
+    </script>
+
+</body>
+
+</html>

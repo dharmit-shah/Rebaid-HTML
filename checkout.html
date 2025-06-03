@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebaid - Checkout</title>
+
+    <!-- Phone Number -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+
+    <!-- Master Pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+        $(function () { $("#header").load("header.html"); $("#footer").load("footer.html"); });
+    </script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- Shopping Cart -->
+    <section class="shopping_cart_component d-flex container-fluid flex-wrap g-3">
+        <!-- Left Side -->
+        <div class="shopping_cart_section col-md-8 pe-5 d-flex flex-column order_summery_component">
+            <div class="cart_title d-flex align-items-center">
+                <h2 class="m-0">Checkout</h2>
+            </div>
+
+            <!-- accordian -->
+            <div class="tabs border-0 d-flex flex-column gap-4">
+                <!-- Shipping Information -->
+                <div class="tab shipping_info_box" id="shippingInfo">
+                    <input type="radio" class="" id="rd1" name="rd" checked>
+                    <label class="tab-label accordian_tab_title" for="rd1">
+                        <div class="d-flex shipping_info_title gap-3 align-items-center justify-content-center">
+                            <h4 class="m-0">Shipping Information</h4>
+                        </div>
+                        <a href="javascript:void(0)" class="m-0 d-flex gap-2" title="Edit Cart">
+                            <img src="./assets/img/edit-icon.svg" alt="">
+                            Edit Cart
+                        </a>
+                    </label>
+                    <div class="tab-content p-0">
+                        <form class="d-flex flex-wrap gap-3 pt-4">
+                            <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                <div class="form-group w-100">
+                                    <label for="exampleFormControlSelect1">Choose address</label>
+                                    <select class="form-select form-control" id="exampleFormControlSelect1">
+                                        <option selected disabled>Choose your address</option>
+                                        <option>D-401, Swastik Residency, New VIP Road, Vesu, Surat - 395009</option>
+                                        <option>D-401, Swastik Residency, New VIP Road, Vesu, Surat - 395009</option>
+                                        <option>D-401, Swastik Residency, New VIP Road, Vesu, Surat - 395007</option>
+                                        <option>D-401, Swastik Residency, New VIP Road, Vesu, Surat - 395007</option>
+                                        <option>D-401, Swastik Residency, New VIP Road, Vesu, Surat - 395007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">First Name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Enter your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Last Name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Enter your last name">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                <div class="form-group w-100">
+                                    <label for="exampleFormControlInput1">Address</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Enter your address">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">City</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Enter your city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Postal Code</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Enter your postal code">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                <div class="form-group d-flex flex-column">
+                                    <label for="exampleFormControlInput1">Phone Number</label>
+                                    <input type="tel" id="phoneInput" class="form-control"
+                                        placeholder="Enter phone number">
+                                </div>
+                            </div>
+
+                            <div class="shipping_form_data w-100 d-flex justify-content-end">
+                                <div class="ShoppingMethod_button form-group">
+                                    <a class="ShoppingMethod_btn" href="javascript:void(0)"
+                                        title="Go to Shipping Method">Go to Shipping Method</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Shipping Method -->
+                <div class="tab shipping_info_box" id="shippingMethod">
+                    <input type="radio" class="" id="rd2" name="rd">
+                    <label class="tab-label accordian_tab_title" for="rd2">
+                        <div class="d-flex shipping_info_title gap-3 align-items-center justify-content-center">
+                            <h4 class="m-0">Shipping Method</h4>
+                        </div>
+                        <a href="javascript:void(0)" class="m-0 d-flex gap-2" title="Edit Cart">
+                            <img src="./assets/img/edit-icon.svg" alt="">
+                            Edit Cart
+                        </a>
+                    </label>
+                    <div class="tab-content p-0">
+                        <form class="d-flex flex-wrap gap-3 pt-4">
+
+                            <label class="w-100">
+                                <input type="radio" name="delivery_method" class="delivery_input" />
+                                <div
+                                    class="shipping_method_strip w-100 d-flex gap-3 align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <div class="delivery_radio_visual"></div>
+                                        <p class="m-0">Free Delivery</p>
+                                    </div>
+                                    <h4 class="m-0">$0.00</h4>
+                                </div>
+                            </label>
+
+                            <div class="shipping_form_data w-100 d-flex justify-content-end">
+                                <div class="ShoppingMethod_button form-group">
+                                    <a class="ShoppingMethod_btn" href="javascript:void(0)" title="Go to Billing">Go to
+                                        Billing</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Billing Information -->
+                <div class="tab shipping_info_box" id="billingInfo">
+                    <input type="radio" class="" id="rd3" name="rd">
+                    <label class="tab-label accordian_tab_title" for="rd3">
+                        <div class="d-flex shipping_info_title gap-3 align-items-center justify-content-center">
+                            <h4 class="m-0">Billing Information</h4>
+                        </div>
+                        <a href="javascript:void(0)" class="m-0 d-flex gap-2" title="Edit Cart">
+                            <img src="./assets/img/edit-icon.svg" alt="">
+                            Edit Cart
+                        </a>
+                    </label>
+                    <div class="tab-content p-0">
+                        <form class="d-flex flex-wrap gap-3 pt-4 flex-column">
+
+                            <!-- Credit/Debit Card -->
+                            <label class=" w-100">
+                                <input type="radio" name="payment_method" class="shipping_input" />
+                                <div
+                                    class="shipping_method_strip w-100 d-flex gap-3 align-items-center justify-content-between">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <div class="shipping_radio_visual"></div>
+                                        <p class="m-0">Credit/Debit Card</p>
+                                    </div>
+                                    <div class="cards d-flex gap-2">
+                                        <img src="./assets/img/mastercard.svg" alt="Master Card" />
+                                        <img src="./assets/img/visa.svg" alt="Visa" />
+                                        <img src="./assets/img/american_express.svg" alt="American Express" />
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- cards_list -->
+                            <div class="cards_list d-flex gap-3 flex-wrap">
+                                <!-- Master Card -->
+                                <div class="saved_card_box d-flex gap-3">
+                                    <img src="./assets/img/mastercard.svg" alt="Master Card">
+                                    <div class="card_details d-flex flex-column gap-0">
+                                        <p>****5845</p>
+                                        <p>Expires: 12/28</p>
+                                    </div>
+                                </div>
+                                <!-- Visa Card -->
+                                <div class="saved_card_box d-flex gap-3">
+                                    <img src="./assets/img/visa.svg" alt="Master Card">
+                                    <div class="card_details d-flex flex-column gap-0">
+                                        <p>****5845</p>
+                                        <p>Expires: 12/28</p>
+                                    </div>
+                                </div>
+                                <!-- New card -->
+                                <div class="add_card_box d-flex gap-3">
+                                    <img src="./assets/img/add-icon.svg" alt="Add">
+                                    <div class="add_card_details d-flex flex-column gap-0">
+                                        <p>New card</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- credit_card_form -->
+                            <div class="flex-wrap gap-3 credit_card_form">
+                                <!-- Card number -->
+                                <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                    <div class="form-group w-100">
+                                        <label for="exampleFormControlInput1">Card number</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter your Card number" maxlength="12">
+                                    </div>
+                                </div>
+
+                                <!-- Expiration Date & Security Code -->
+                                <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                    <!-- Expiration Date -->
+                                    <div class="form-group">
+                                        <label for="expiry">Expiration Date</label>
+                                        <input type="text" class="form-control" id="expiry" placeholder="MM/YY"
+                                            maxlength="5" oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                    </div>
+                                    <!-- Security Code -->
+                                    <div class="form-group">
+                                        <label for="cvv">Security Code</label>
+                                        <input type="password" class="form-control" id="cvv" placeholder="***"
+                                            maxlength="3" inputmode="numeric" pattern="\d{3}">
+                                    </div>
+                                </div>
+
+                                <!-- Cardholder's Name -->
+                                <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                    <div class="form-group w-100">
+                                        <label for="exampleFormControlInput1">Cardholder's Name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Ann Smith">
+                                    </div>
+                                </div>
+
+                                <!-- save_card_instructions -->
+                                <div class="card_concent d-flex flex-column gap-3 pt-3`">
+                                    <div class="concent_detail d-flex gap-2 align-items-center">
+                                        <img src="./assets/img/right-tick.svg" alt="Right Tick">
+                                        <p>Save card to the account</p>
+                                    </div>
+                                    <div class="concent_detail d-flex gap-2 align-items-center">
+                                        <img src="./assets/img/right-tick.svg" alt="Right Tick">
+                                        <p>Use shipping address as billing address</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Button -->
+                            <div class="shipping_form_data w-100 d-flex justify-content-end" id="submitBtn">
+                                <div class="ShoppingMethod_button form-group">
+                                    <a class="ShoppingMethod_btn" href="javascript:void(0)" title="Place Order">Place
+                                        Order</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="d-flex flex-column gap-3 col-md-4 order_summery_component">
+            <div class="order_summery_section">
+                <div class="order_summery_title d-flex align-items-center justify-content-between">
+                    <h2 class="m-0">Order summary</h2>
+                    <a href="./cart.html" class="m-0 d-flex gap-2" title="Edit Cart">
+                        <img src="./assets/img/edit-icon.svg" alt="">
+                        Edit Cart
+                    </a>
+                </div>
+                <div class="order_desc">
+                    <p>The sales tax is calculated when you select your shipping address at checkout.</p>
+                </div>
+                <div class="order_package d-flex flex-column gap-3 w-100">
+                    <div class="order_cart d-flex justify-content-between align-items-center w-100">
+                        <p class="m-0">My cart (2 Item)</p>
+                        <p class="m-0">$14.00</p>
+                    </div>
+                    <div class="order_cart d-flex justify-content-between align-items-center w-100">
+                        <p class="m-0">Sales Tax</p>
+                        <p class="m-0">-</p>
+                    </div>
+                    <div class="order_cart d-flex justify-content-between align-items-center w-100">
+                        <p class="m-0">Cashback</p>
+                        <p class="m-0">$1.28</p>
+                    </div>
+                    <div class="order_cart order_total d-flex justify-content-between align-items-center w-100">
+                        <p class="m-0">Total (excluding delivery)</p>
+                        <p class="m-0">$15.28</p>
+                    </div>
+                </div>
+                <div class="checkout_button d-none w-100">
+                    <a class="w-100 checkout_btn" href="javascript:void(0)" title="Checkout">Checkout</a>
+                </div>
+            </div>
+
+            <div class="card_lists d-flex w-100 px-3 align-items-center justify-content-center gap-5">
+                <img src="./assets/img/mastercard.svg" alt="mastercard">
+                <img src="./assets/img/visa.svg" alt="visa">
+                <img src="./assets/img/PayPal.svg" alt="PayPal">
+                <img src="./assets/img/american_express.svg" alt="american_express">
+            </div>
+        </div>
+
+        <!-- Fullscreen Loader Overlay -->
+        <div id="loaderOverlay">
+            <div class="spinner"></div>
+            <h4>Processing Payment</h4>
+        </div>
+    </section>
+
+    <!-- foooter -->
+    <div id="footer"></div>
+
+    <!-- phone number script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.min.js"></script>
+
+    <!-- Include Inputmask via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+
+    <script>
+        // Credit Cards selection JS
+        document.addEventListener('DOMContentLoaded', function () {
+            const cardBoxes = document.querySelectorAll('.saved_card_box, .add_card_box');
+
+            cardBoxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    // Remove selection from all
+                    cardBoxes.forEach(b => b.classList.remove('card_selected'));
+
+                    // Add selection to clicked one
+                    box.classList.add('card_selected');
+                });
+            });
+        });
+
+        // Mask for MM/YY
+        Inputmask("99/99").mask(document.getElementById("expiry"));
+    </script>
+
+    <!-- Page Loader -->
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            const loader = document.getElementById("loaderOverlay");
+            loader.style.display = "flex";
+            loader.style.flexDirection = "column";
+            loader.style.rowGap = "16px";
+            this.disabled = true;
+            setTimeout(function () {
+                window.location.href = "./thank-you.html";
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>
