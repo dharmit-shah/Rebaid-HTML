@@ -15,6 +15,85 @@
 
 <body>
 
+    <!-- ANNOUNCEMET BAR -->
+    <section class="rebaid_announcement">
+        <div class="ShowHide text-white justify-content-between" id="Bar">
+            <div id="float-left"
+                class="w-100 d-flex text-center justify-content-center newsbar_content align-items-center gap-2">
+                <img src="./assets/img/new.svg" alt="News">
+                <p>New! Buy on Rebaid is live!</p>
+                <a href="#" class="news-Click-here font-weight-bold" title="Learn More">Learn More</a>
+            </div>
+            <div class="float-right">
+                <a href="#" onclick="Hide(Bar);">
+                    <img src="./assets/img/cross.svg" alt="Cancel">
+                </a>
+            </div>
+
+            <!-- Learn More Model -->
+            <div class="news-custom-model-main">
+                <div class="news-custom-model-inner">
+                    <div class="news-custom-model-wrap">
+                        <div class="news-pop-up-content-wrap">
+                            <div
+                                class="d-flex news_banner justify-content-between align-items-center w-100 position-relative">
+                                <img class="desktop_news_banner" src="./assets/img/news_popup_banner.svg"
+                                    alt="Desktop_version">
+                                <img class="mobile_news_banner" src="./assets/img/mobile_news_popup_banner.svg"
+                                    alt="Mobile Version">
+                                <div class="news-close-btn close_bar">x</div>
+                            </div>
+                            <div class="announce_title">
+                                <h1>Skip Amazon. <br /> Shop on Rebaid!</h1>
+                                <p>You'll no longer need to go back and forth between Amazon and Rebaid, or copy and
+                                    paste order numbers. Simply checkout on Rebaid and you order will be shipped
+                                    directly to you from Rebaid's fulfillment center.</p>
+                            </div>
+                            <div class="announce_data d-flex flex-column gap-3">
+                                <!-- Hundreds of Brand Deals -->
+                                <div class="announce_box d-flex gap-3 align-items-center">
+                                    <img src="./assets/img/brand_deals.svg" alt="Brand Deals">
+                                    <div class="announce_desc d-flex flex-column">
+                                        <h4>Hundreds of Brand Deals</h4>
+                                        <p>Rebaid has partnered with a large consumer research company to bring you
+                                            unreal deals on big brand names.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Auto Order Confirmation -->
+                                <div class="announce_box d-flex gap-3 align-items-center">
+                                    <img src="./assets/img/auto_order.svg" alt="Brand Deals">
+                                    <div class="announce_desc d-flex flex-column">
+                                        <h4>Auto Order Confirmation</h4>
+                                        <p>No more copying and pasting order confirmation numbers or forgetting to
+                                            submit your order number within the required timeframe!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Faster Rebates -->
+                                <div class="announce_box d-flex gap-3 align-items-center">
+                                    <img src="./assets/img/faster_rebates.svg" alt="Brand Deals">
+                                    <div class="announce_desc d-flex flex-column">
+                                        <h4>Faster Rebates</h4>
+                                        <p>Rebates issued back to your credit/ debit card. No more waiting for check to
+                                            arrive in the mail or ACH deposits to post.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3 justify-content-end align-items-center w-100">
+                                <a class="cancel_checkout news-close-btn" href="javascript:void(0)"
+                                    title="Close">Close</a>
+                                <a class="news-leave_checkout" href="javascript:void(0)" title="Start Shopping">Start
+                                    Shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-bg-overlay"></div>
+            </div>
+        </div>
+    </section>
     <header>
         <nav class="navbar p-0">
             <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -34,14 +113,22 @@
                         <a href="./profile.html" title="Profile">
                             <img src="./assets/img/profile.svg" alt="">
                         </a>
-                         <a href="./cart.html" title="View Cart">
-                             <img src="./assets/img/cart.svg" alt="">
-                            </a>
+                        <a href="./cart.html" title="View Cart">
+                            <img src="./assets/img/cart.svg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Announcement Bar JS -->
+    <script>
+        function Hide(HideID) { HideID.style.display = "none"; }
+        // Learn More Popup
+        $(".news-Click-here").on('click', function () { $(".news-custom-model-main").addClass('news-model-open'); });
+        $(".news-close-btn, .news-bg-overlay").click(function () { $(".news-custom-model-main").removeClass('news-model-open'); });
+    </script>
 </body>
 
 </html>

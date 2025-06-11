@@ -245,3 +245,33 @@ input:checked ~ .tab-content{max-height:100vh;padding:1em}
 .closeAccount-cancel_checkout{font-weight: 500;font-size: 14px;line-height: 20px;color: rgba(46, 55, 70, 1);text-decoration: none;}
 .closeAccount-leave_checkout{width: 154;height: 36;border-radius: 100px;padding-top: 8px;padding-right: 24px;padding-bottom: 8px;padding-left: 24px;gap: 10px;background: rgba(46, 55, 70, 1);color: #fff;text-decoration: none;}
 .default_address_form, .other_address_form{display: flex;}
+/* Announcement CSS */
+.ShowHide {display:flex;overflow: hidden;background-color: rgba(255, 214, 93, 1);padding: 10px 10px;}
+.newsbar_content p{font-family: Inter;font-weight: 400;font-size: 14px;color: rgba(45, 54, 70, 1);}
+.newsbar_content a{font-family: Inter;font-weight: 600;font-size: 14px;color: rgba(45, 54, 70, 1);text-decoration: none;}
+.close_bar{filter: invert(1);font-size:22px;position: absolute;top: 10px;right: 16px;}
+.announce_title {width: 100%;text-align: left;display: flex;flex-direction: column;gap: 16px;}
+.announce_title h1{font-family: Inter;font-weight: 600;font-size: 48px;line-height: 56px;color:rgba(45, 54, 70, 1);}
+.announce_title p{font-family: Inter;font-weight: 400;font-size: 14px;color:rgba(102, 105, 109, 1);}
+.announce_desc{text-align:left;gap: 10px;}
+.announce_desc h4{font-family: Inter;font-weight: 600;font-size: 14px;color: rgba(45, 54, 70, 1);}
+.announce_desc p{font-family: Inter;font-weight: 400;font-size: 14px;color: rgba(102, 105, 109, 1);}
+.news_banner img{width:100%}
+.desktop_news_banner{display: block;}
+.mobile_news_banner{display: none;}
+
+.news-Click-here {cursor: pointer;color: #fff;text-align: center;font-size:16px;transition:background-image 3s ease-in-out;}
+.news-Click-here:hover{transition:background-image 3s ease-in-out;}
+.news-custom-model-main {text-align: center;overflow: hidden;position: fixed;top: 0;right: 0;bottom: 0;left: 0;-webkit-overflow-scrolling: touch;outline: 0;opacity: 0;-webkit-transition: opacity 0.15s linear, z-index 0.15;-o-transition: opacity 0.15s linear, z-index 0.15;transition: opacity 0.15s linear, z-index 0.15;z-index: -1;overflow-x: hidden;overflow-y: auto;}
+.news-model-open {z-index: 99999;opacity: 1;overflow: hidden;}
+.news-custom-model-inner {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);transition: transform 0.3s ease-out,;display: inline-block;vertical-align: middle;width: 650px;margin: 30px auto;max-width: 97%;}
+.news-custom-model-wrap {display: block;width: 100%;position: relative;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 8px;background-clip: padding-box;outline: 0;text-align: left;padding: 24px;box-sizing: border-box;max-height: calc(100vh - 60px);overflow-y: auto;}
+.news-model-open .news-custom-model-inner {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);position: relative;z-index: 999;}
+.news-model-open .news-bg-overlay {background: rgba(0, 0, 0, 0.6);z-index: 99;}
+.news-bg-overlay {background: rgba(0, 0, 0, 0);height: 100vh;width: 100%;position: fixed;left: 0;top: 0;right: 0;bottom: 0;z-index: 0;-webkit-transition: background 0.15s linear;-o-transition: background 0.15s linear;transition: background 0.15s linear;}
+.news-close-btn {cursor: pointer;z-index: 99;}
+.news-pop-up-content-wrap{text-align: center;align-items: center;display: flex;flex-direction: column;gap: 24px;}
+.news-pop-up-content-wrap h2{font-weight: 600;font-size: 20px;line-height: 18px;color: rgba(45, 54, 70, 1);}
+.news-pop-up-content-wrap p{font-weight: 400;font-size: 14px;line-height: 18px;color: rgba(102, 105, 109, 1);}
+.news-cancel_checkout{font-weight: 500;font-size: 14px;line-height: 20px;color: rgba(46, 55, 70, 1);text-decoration: none;}
+.news-leave_checkout{width: 154px;height: 36px;border-radius: 100px;padding-top: 8px;padding-right: 24px;padding-bottom: 8px;padding-left: 24px;gap: 10px;background: rgba(0, 219, 177, 1);color: rgba(45, 54, 70, 1);text-decoration: none;font-weight: 500;font-size: 14px;}

@@ -16,6 +16,7 @@
     .newPayment-custom-model-main:before {content: "";display: inline-block;height: auto;vertical-align: middle;margin-right: -0px;height: 100%;}
     .cardDelete-custom-model-main:before {content: "";display: inline-block;height: auto;vertical-align: middle;margin-right: -0px;height: 100%;}
     .closeAccount-custom-model-main:before {content: "";display: inline-block;height: auto;vertical-align: middle;margin-right: -0px;height: 100%;}
+    .news-custom-model-main:before {content: "";display: inline-block;height: auto;vertical-align: middle;margin-right: -0px;height: 100%;}
 }
 @media screen and (max-width:799px){
   .custom-model-inner{margin-top: 45px;}
@@ -23,11 +24,12 @@
   .newPayment-custom-model-inner{margin-top: 45px;}
   .cardDelete-custom-model-inner{margin-top: 45px;}
   .closeAccount-custom-model-inner{margin-top: 45px;}
-    .welcome_section {padding: 48px 24px 0 24px;flex-direction: column;align-items: center;row-gap: 24px;}
-    .vertical-mdl-tabs {padding: 0 24px 24px 24px;}
+  .news-custom-model-inner{margin-top: 45px;}
+  .welcome_section {padding: 48px 24px 0 24px;flex-direction: column;align-items: center;row-gap: 24px;}
+  .vertical-mdl-tabs {padding: 0 24px 24px 24px;}
   .account_tabs {flex-direction: row !important;width: 100%;justify-content: center;gap: 48px !important;}
-    .mdl-grid--no-spacing>.mdl-cell--4-col, .mdl-grid--no-spacing>.mdl-cell--4-col-phone.mdl-cell--4-col-phone {width: 100%;}
-        .vertical-mdl-tabs .mdl-tabs__tab {width: auto;padding: 16px 0px 16px 0px;font-size: 14px;}
+  .mdl-grid--no-spacing>.mdl-cell--4-col, .mdl-grid--no-spacing>.mdl-cell--4-col-phone.mdl-cell--4-col-phone {width: 100%;}
+  .vertical-mdl-tabs .mdl-tabs__tab {width: auto;padding: 16px 0px 16px 0px;font-size: 14px;}
 }
 
 @media (max-width:600px){
@@ -50,4 +52,10 @@
     .vertical-mdl-tabs {padding: 0 24px 24px 24px;}
     .address_box {flex-direction: column;}
     .vertical-mdl-tabs .mdl-tabs__tab-bar {align-items: center;}
+    .desktop_news_banner{display: none;}
+    .mobile_news_banner{display: block;}
+    .announce_title h1 {font-weight: 600;font-size: 32px;line-height: 120%;}
+    .news-pop-up-content-wrap p {line-height: 140%;}
+    .announce_box{flex-direction: column;align-items: flex-start !important;text-align: left;}
+    .announce_desc {gap: 4px;}
 }
