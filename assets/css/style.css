@@ -275,3 +275,7 @@ input:checked ~ .tab-content{max-height:100vh;padding:1em}
 .news-pop-up-content-wrap p{font-weight: 400;font-size: 14px;line-height: 18px;color: rgba(102, 105, 109, 1);}
 .news-cancel_checkout{font-weight: 500;font-size: 14px;line-height: 20px;color: rgba(46, 55, 70, 1);text-decoration: none;}
 .news-leave_checkout{width: 154px;height: 36px;border-radius: 100px;padding-top: 8px;padding-right: 24px;padding-bottom: 8px;padding-left: 24px;gap: 10px;background: rgba(0, 219, 177, 1);color: rgba(45, 54, 70, 1);text-decoration: none;font-weight: 500;font-size: 14px;}
+.purchased_products {display: flex;flex-wrap: wrap;gap: 16px;}
+.purchased_products .purchased_data{position:relative;}
+.purchased_products .purchased_data img{height: 100px;width: 100px;border: 1px solid #f2f2f2;border-radius: 10px;object-fit: contain;}
+.purchased_products .purchased_data .purchased_item_quantity{position: absolute;right: -6px;bottom: -6px;padding: 6px;border-radius: 100px;font-weight: 600;border: 1px solid #f2f2f2;height: 24px;width: 24px;display: flex;align-items: center;font-size: 12px;justify-content: center;background-color: #fff;}
