@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebaid - Claim</title>
+
+    <link rel="stylesheet" href="./assets/css/claim.css">
+
+    <!-- Master Pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+        $(function () { $("#header").load("header.html"); $("#footer").load("footer.html"); });
+    </script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="header"></div>
+
+    <section class="claim_rebaid_component container-fluid flex-wrap g-3">
+        <!-- Title -->
+        <div class="claim_title">
+            <h1>Claim Your Rebate</h1>
+            <p>Enter your redemption ID, upload your form, and get your rebate added to your balance.</p>
+        </div>
+
+        <!-- Redemption Input Field -->
+        <div class="redemption-container">
+            <input type="text" placeholder="Enter Redemption ID" />
+            <button>Find Redemption</button>
+        </div>
+
+        <!-- Product List -->
+        <div class="claim_lists">
+            <!-- 1 -->
+            <div class="claim_product_list">
+                <div class="claim_data">
+                    <img src="./assets/img/product-1.svg" alt="">
+                </div>
+                <div class="claim_desc">
+                    <h4>3-Pack jewelry box, jewelry boxes for women & travel jewelry organizer with Mirror & Small
+                        Jewelry
+                        Box, DoubleLayer jewelry organizer box GiftsGirlfriend Wife Ideal Gift</h4>
+                    <div class="seller_desc">
+                        <h6>Seller:</h6>
+                        <p>Rebaid</p>
+                    </div>
+                    <div class="seller_desc">
+                        <h6>Redemption ID:</h6>
+                        <p>Redemption2025</p>
+                    </div>
+                    <div class="claim_price">
+                        <h3>$14.50</h3>
+                        <p>Rebate Available</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="claim_product_list">
+                <div class="claim_data">
+                    <img src="./assets/img/product-1.svg" alt="">
+                </div>
+                <div class="claim_desc">
+                    <h4>3-Pack jewelry box, jewelry boxes for women & travel jewelry organizer with Mirror & Small
+                        Jewelry
+                        Box, DoubleLayer jewelry organizer box GiftsGirlfriend Wife Ideal Gift</h4>
+                    <div class="seller_desc">
+                        <h6>Seller:</h6>
+                        <p>Rebaid</p>
+                    </div>
+                    <div class="seller_desc">
+                        <h6>Redemption ID:</h6>
+                        <p>Redemption2025</p>
+                    </div>
+                    <div class="claim_price">
+                        <h3>$14.50</h3>
+                        <p>Rebate Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload File  -->
+        <div class="container">
+            <div class="upload-container">
+                <div class="upload-box" id="uploadBox">
+                    <div class="upload-content">
+                        <div class="upload-icon">
+                            <img src="./assets/img/upload_icon.svg" alt="">
+                        </div>
+                        <h3 class="upload-title">Click to upload the form or drag and drop</h3>
+                        <p class="upload-subtitle">Maximum size: 50MB</p>
+                        <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                    </div>
+                </div>
+
+                <div class="files-preview" id="filesPreview">
+                    <div class="files-list" id="filesList">
+                        <!-- Files will be dynamically added here -->
+                    </div>
+                </div>
+
+                <div class="submit_claim_btn">
+                    <a class="ShoppingMethod_btn" href="./claim-success.html" title="submit claim">submit claim</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Data Found -->
+        <div class="no_claim_data_found" id="no_claim">
+            <img src="./assets/img/no_claim_data.svg" alt="">
+            <p>Redemption ID not found.</p>
+            <p>Please check the ID you entered and try again.</p>
+        </div>
+
+    </section>
+
+    <!-- foooter -->
+    <div id="footer"></div>
+
+    <!-- UPload File JS -->
+    <script>
+        class FileUploadComponent {
+            constructor() {
+                this.uploadBox = document.getElementById('uploadBox');
+                this.fileInput = document.getElementById('fileInput');
+                this.filesPreview = document.getElementById('filesPreview');
+                this.filesList = document.getElementById('filesList');
+                this.uploadProgress = document.getElementById('uploadProgress');
+                this.uploadComplete = document.getElementById('uploadComplete');
+                this.addMoreBtn = document.getElementById('addMoreBtn');
+                this.newUploadBtn = document.getElementById('newUploadBtn');
+                this.viewFilesBtn = document.getElementById('viewFilesBtn');
+                this.files = [];
+                this.maxFileSize = 10 * 1024 * 1024;
+                this.allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                this.init();
+            }
+            init() { this.setupEventListeners(); }
+            setupEventListeners() {
+                this.uploadBox.addEventListener('click', () => { this.fileInput.click(); });
+                this.fileInput.addEventListener('change', (e) => { this.handleFiles(e.target.files); });
+                this.uploadBox.addEventListener('dragover', (e) => { e.preventDefault(); this.uploadBox.classList.add('dragover'); });
+                this.uploadBox.addEventListener('dragleave', (e) => { e.preventDefault(); this.uploadBox.classList.remove('dragover'); });
+                this.uploadBox.addEventListener('drop', (e) => { e.preventDefault(); this.uploadBox.classList.remove('dragover'); this.handleFiles(e.dataTransfer.files); });
+                if (this.addMoreBtn) this.addMoreBtn.addEventListener('click', () => { this.fileInput.click(); });
+                if (this.newUploadBtn) this.newUploadBtn.addEventListener('click', () => { this.startNewUpload(); });
+                if (this.viewFilesBtn) this.viewFilesBtn.addEventListener('click', () => { this.viewUploadedFiles(); });
+                ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => { document.addEventListener(eventName, (e) => { e.preventDefault(); e.stopPropagation(); }); });
+            }
+            handleFiles(fileList) {
+                const newFiles = Array.from(fileList);
+                newFiles.forEach(file => { if (this.validateFile(file)) { this.addFile(file); } });
+                if (this.files.length > 0) { this.showPreview(); this.simulateUpload(); }
+            }
+            validateFile(file) {
+                if (!this.allowedTypes.includes(file.type)) { this.showError(`${file.name}: Only JPG, PNG, and GIF files are allowed.`); return false; }
+                if (file.size > this.maxFileSize) { this.showError(`${file.name}: File size must be less than 10MB.`); return false; }
+                if (this.files.some(f => f.name === file.name && f.size === file.size)) { this.showError(`${file.name}: File already selected.`); return false; }
+                return true;
+            }
+            addFile(file) {
+                const fileObj = {
+                    file: file,
+                    id: Date.now() + Math.random(),
+                    name: file.name,
+                    size: this.formatFileSize(file.size),
+                    status: 'pending',
+                    progress: 0
+                };
+                this.files.push(fileObj);
+                this.renderFile(fileObj);
+            }
+            renderFile(fileObj) {
+                const fileElement = document.createElement('div');
+                fileElement.className = 'file-item';
+                fileElement.setAttribute('data-file-id', fileObj.id);
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    fileElement.innerHTML = `
+                        <img src="./assets/img/file_uploaded.svg" alt="${fileObj.name}" class="file-preview">
+                        <div class="file_data">
+                            <div class="file-info">
+                                <div class="file_name_size">
+                                    <div class="file-name">${fileObj.name}</div>
+                                    <div class="file-size">${fileObj.size}</div>
+                                </div>
+                                <div class="file-actions">
+                                <button class="file-action delete">
+                                    <img src="./assets/img/cross.svg" alt="Delete">
+                                </button>
+                            </div>
+                            </div>
+                            <div class="file-progress-container">
+                                <div class="file-progress-bar">
+                                    <div class="file-progress-fill" style="width:0%;"></div>
+                                </div>
+                                <div class="file-progress-percent">0%</div>
+                            </div>
+                        </div>
+                    `;
+                    this.filesList.appendChild(fileElement);
+                    const deleteButton = fileElement.querySelector('.file-action.delete');
+                    deleteButton.addEventListener('click', () => { this.removeFile(fileObj.id); });
+                };
+                reader.readAsDataURL(fileObj.file);
+            }
+            showPreview() { this.filesPreview.classList.add('show'); if (this.addMoreBtn) this.addMoreBtn.style.display = 'inline-block'; }
+            simulateUpload() {
+                this.uploadBox.classList.add('uploading');
+                let completedFiles = 0;
+                const totalFiles = this.files.length;
+                this.files.forEach((fileObj, index) => {
+                    setTimeout(() => {
+                        this.uploadFile(fileObj, (progress) => {
+                            const fileElement = document.querySelector(`[data-file-id="${fileObj.id}"]`);
+                            if (fileElement) {
+                                const progressFill = fileElement.querySelector('.file-progress-fill');
+                                const progressPercent = fileElement.querySelector('.file-progress-percent');
+                                progressFill.style.width = `${progress}%`;
+                                progressPercent.textContent = `${Math.round(progress)}%`;
+                            }
+                            const overallProgress = ((completedFiles + progress / 100) / totalFiles) * 100;
+                            this.updateProgress(overallProgress);
+                            if (progress === 100) { completedFiles++; if (completedFiles === totalFiles) { this.completeUpload(); } }
+                        });
+                    }, index * 200);
+                });
+            }
+            uploadFile(fileObj, progressCallback) {
+                let progress = 0;
+                const uploadInterval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress >= 100) { progress = 100; clearInterval(uploadInterval); fileObj.status = 'success'; }
+                    progressCallback(progress);
+                }, 100 + Math.random() * 200);
+            }
+            updateProgress(progress) {
+                const progressBar = document.querySelector('.progress-bar');
+                const progressText = document.querySelector('.progress-text');
+                if (progressBar && progressText) {
+                    const circumference = 2 * Math.PI * 25;
+                    const offset = circumference - (progress / 100) * circumference;
+                    progressBar.style.strokeDashoffset = offset;
+                    progressText.textContent = Math.round(progress) + '%';
+                }
+            }
+            completeUpload() {
+                setTimeout(() => {
+                    if (this.uploadComplete) {
+                        this.uploadComplete.style.display = 'block';
+                        const completeTitle = this.uploadComplete.querySelector('.complete-title');
+                        const completeSubtitle = this.uploadComplete.querySelector('.complete-subtitle');
+                        if (completeTitle) completeTitle.textContent = 'Upload Successful!';
+                        if (completeSubtitle) completeSubtitle.textContent = `${this.files.length} file(s) uploaded successfully`;
+                    }
+                }, 500);
+            }
+            startNewUpload() {
+                this.files = [];
+                this.filesList.innerHTML = '';
+                if (this.uploadComplete) this.uploadComplete.style.display = 'none';
+                this.uploadBox.style.display = 'block';
+                this.uploadBox.classList.remove('uploading', 'success');
+                this.filesPreview.classList.remove('show');
+                if (this.addMoreBtn) this.addMoreBtn.style.display = 'none';
+                const progressBar = document.querySelector('.progress-bar');
+                const progressText = document.querySelector('.progress-text');
+                if (progressBar) progressBar.style.strokeDashoffset = '157';
+                if (progressText) progressText.textContent = '0%';
+                this.fileInput.value = '';
+            }
+            viewUploadedFiles() {
+                if (this.uploadComplete) this.uploadComplete.style.display = 'none';
+                this.filesPreview.classList.add('show');
+                if (this.addMoreBtn) this.addMoreBtn.style.display = 'inline-block';
+                const previewTitle = this.filesPreview.querySelector('.preview-title');
+                if (previewTitle) previewTitle.textContent = 'Uploaded Files';
+            }
+            formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+            showError(message) {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-notification';
+                errorDiv.style.animation = 'slideInRight 0.3s ease';
+                errorDiv.textContent = message;
+                document.body.appendChild(errorDiv);
+                setTimeout(() => {
+                    errorDiv.style.animation = 'slideOutRight 0.3s ease';
+                    setTimeout(() => errorDiv.remove(), 300);
+                }, 4000);
+            }
+            removeFile(fileId) {
+                this.files = this.files.filter(f => f.id != fileId);
+                const fileElement = document.querySelector(`[data-file-id="${fileId}"]`);
+                if (fileElement) {
+                    fileElement.style.animation = 'slideOut 0.3s ease forwards';
+                    setTimeout(() => {
+                        fileElement.remove();
+                        if (this.files.length === 0) {
+                            this.filesPreview.classList.remove('show');
+                            if (this.addMoreBtn) this.addMoreBtn.style.display = 'none';
+                            this.uploadBox.classList.remove('uploading');
+                        }
+                    }, 300);
+                }
+            }
+        }
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {transform: translateX(100%);opacity: 0;}
+                to {transform: translateX(0);opacity: 1;}
+            }
+            @keyframes slideOutRight {
+                from {transform: translateX(0);opacity: 1;}
+                to {transform: translateX(100%);opacity: 0;}
+            }
+            @keyframes slideOut {
+                from {opacity: 1;transform: translateY(0);}
+                to {opacity: 0;transform: translateY(-20px);}
+            }
+        `;
+        document.head.appendChild(style);
+        document.addEventListener('DOMContentLoaded', () => { fileUpload = new FileUploadComponent(); });
+        if (typeof module !== 'undefined' && module.exports) { module.exports = FileUploadComponent; }
+    </script>
+</body>
+
+</html>

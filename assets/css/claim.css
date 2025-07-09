@@ -1,0 +1,130 @@
+.claim_rebaid_component {display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 80px 0;row-gap: 64px;max-width: 650px;}
+.claim_title {display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap: 12px;background-image: url(../img/claim_bg_desktop.svg);background-repeat: no-repeat;}
+.claim_rebaid_component h1 {color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 500;font-size: 48px;}
+.claim_rebaid_component p {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 400;font-style: Regular;font-size: 16px;}
+.redemption-container {display: flex;width: 100%;background: #f8f8f8;border-radius: 999px;overflow: hidden;box-shadow: 0 0 0 1px #ddd;}
+.redemption-container input {flex: 1;border: none;padding: 18px 20px;outline: none;background: transparent;color: rgba(46, 55, 70, 1);font-family: Inter;font-weight: 500;font-size: 16px;line-height: 24px;text-transform: capitalize;}
+.redemption-container button {background: rgba(0, 219, 177, 1);border: none;color: rgba(15, 23, 35, 1);padding: 0 25px;cursor: pointer;transition: background 0.3s;border-radius: 990px;margin: 3px;font-family: Inter;font-weight: 500;font-size: 16px;line-height: 24px;text-transform: capitalize;}
+.redemption-container button:hover {background: #00d1ae;}
+.no_claim_data_found {display: flex;flex-direction: column;align-items: center;row-gap: 4px;}
+.no_claim_data_found img {margin-bottom: 10px;}
+.no_claim_data_found p {color: rgba(46, 55, 70, 1);font-family: Inter;font-weight: 500;font-style: Medium;font-size: 16px;line-height: 28px;}
+.claim_lists {display: flex;flex-direction: column;row-gap: 24px;}
+.claim_product_list {display: flex;gap: 24px;border-bottom: 1px solid rgba(241, 243, 243, 1);padding-bottom: 24px;}
+.claim_desc {gap: 14px;display: flex;flex-direction: column;}
+.claim_desc h4 {display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 600;font-style: SemiBold;font-size: 16px;line-height: 24px;}
+.seller_desc {display: flex;gap: 6px;align-items: center;}
+.seller_desc h6 {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 500;font-style: Medium;font-size: 14px;line-height: 16px;}
+.seller_desc p {color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 500;font-style: Medium;font-size: 14px;line-height: 16px;}
+.claim_price {display: flex;flex-direction: column;row-gap: 4px;}
+.claim_price h3 {color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 700;font-style: Bold;font-size: 24px;line-height: 32px;}
+.claim_price p {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 500;font-style: Medium;font-size: 14px;line-height: 16px;}
+.claim_product_list .claim_data img {height: 200px;width: auto;object-fit: cover;}
+
+.upload-container {display: flex;flex-direction: column;font-family: Inter;gap: 0.75rem;}
+.upload-box {position: relative;padding: 3rem 2rem;text-align: center;border: 8px dashed rgba(197, 198, 200, 1);transition: all 0.3s ease;background: rgba(255, 255, 255, 0.05);backdrop-filter: blur(20px);cursor: pointer;border-radius: 16px;border-width: 1px;padding: 36px 16px;gap: 16px;display: flex;align-items: center;justify-content: center;}
+.upload-box.dragover {border-color: rgba(0, 219, 177, 1);background: rgba(240, 147, 251, 0.1);transform: scale(1.02);}
+.upload-box.uploading {border-color: rgba(0, 219, 177, 1);}
+.upload-content {transition: all 0.3s ease;}
+.upload-box.uploading .upload-progress {opacity: 1;visibility: visible;}
+.upload-icon {margin-bottom: 1rem;color: rgba(0, 219, 177, 1);}
+.upload-icon img {height: 40px;width: 40px;}
+.upload-title {color: rgba(46, 55, 70, 1);font-family: Inter;font-weight: 500;font-style: Medium;font-size: 14px;line-height: 16px;margin-bottom: 10px;}
+.upload-subtitle {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 500;font-style: Medium;font-size: 14px;line-height: 24px;}
+.upload-subtitle {color: #e2e8f0;font-size: 0.95rem;}
+.upload-button {background: linear-gradient(135deg, rgba(0, 219, 177, 1) 0%, #f5576c 100%);color: white;border: none;padding: 1rem 2rem;border-radius: 12px;font-size: 1rem;font-weight: 500;cursor: pointer;transition: all 0.3s ease;box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);}
+.upload-button:hover {transform: translateY(-2px);box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);}
+.files-preview {background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(20px);border-radius: 10px;opacity: 0;visibility: hidden;transform: translateY(20px);transition: all 0.4s ease;border: 1px solid rgba(197, 198, 200, 1);}
+.files-preview.show {opacity: 1;visibility: visible;transform: translateY(0);padding: 1rem;}
+.files-list {display: grid;gap: 1rem;}
+.file-item {display: flex;gap: 1rem;background: rgba(255, 255, 255, 0.05);border: 1px solid rgba(255, 255, 255, 0.1);border-radius: 12px;transition: all 0.3s ease;backdrop-filter: blur(10px);align-items: flex-start;}
+.file-item:hover {background: rgba(255, 255, 255, 0.1);transform: translateY(-2px);}
+.file-preview {width: 44px;height: 44px;object-fit: cover;border-radius: 8px;background: rgba(255, 255, 255, 0.1);}
+.file-info {flex: 1;display: flex;justify-content: space-between;}
+.file-name {font-weight: 500;color: rgba(46, 55, 70, 1);margin-bottom: 0.25rem;font-family: Inter;}
+.file_data {display: flex;flex-direction: column;width: 100%;}
+.file-size {font-size: 0.85rem;color: rgba(46, 55, 70, 1);font-family: Inter;}
+.file-status {margin-right: 1rem;}
+.status-icon {font-size: 1.5rem;}
+.status-uploading {color: rgba(0, 219, 177, 1);}
+.status-success {color: #48bb78;}
+.file-actions {display: flex;gap: 0.5rem;}
+.file-action {background: rgba(255, 255, 255, 0.1);border: 1px solid rgba(255, 255, 255, 0.2);color: rgba(46, 55, 70, 1);width: 32px;height: 32px;border-radius: 6px;display: flex;align-items: center;justify-content: center;cursor: pointer;transition: all 0.3s ease;}
+.file-action:hover {background: rgba(255, 255, 255, 0.2);}
+.file-action.delete:hover {background: rgba(245, 87, 108, 0.2);border-color: #f5576c;}
+.success-animation {text-align: center;}
+.success-text {font-size: 1.3rem;font-weight: 600;color: rgba(46, 55, 70, 1);}
+.file-item.error {border: 1px solid #fecaca;background: #fef2f2;}
+.error-message {color: #dc2626;font-size: 0.75rem;margin-top: 0.25rem;}
+.loading {animation: spin 1s linear infinite;}
+.upload-box.dragover::before {opacity: 1;}
+.error-notification {position: fixed;top: 20px;right: 20px;background: rgba(254, 226, 226, 0.95);color: #dc2626;padding: 1rem;border-radius: 12px;border: 1px solid rgba(252, 165, 165, 0.5);box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);z-index: 1000;backdrop-filter: blur(10px);max-width: 300px;}
+.file-progress-container {margin-top: 5px;display: flex;gap: 14px;align-items: center;}
+.file_name_size {display: flex;flex-direction: column;}
+.file-progress-bar {width: 100%;height: 10px;background: #eee;border-radius: 3px;overflow: hidden;border-radius: 50px;}
+.file-progress-fill {width: 0%;height: 100%;background: rgba(46, 55, 70, 1);transition: width 0.3s ease;}
+.file-progress-percent {font-family: Inter;font-size: 14px;margin-top: 2px;text-align: right;color: rgba(102, 105, 109, 1);}
+.submit_claim_btn {width: max-content;float: right;margin: 0 0 0 auto;}
+.submit_claim_btn a {padding: 12px 36px;}
+.claimed_success_component {display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 80px 0;row-gap: 24px;max-width: 650px;text-align: center;}
+.claimed_success_component h1 {font-family: Inter;font-weight: 500;font-style: Medium;font-size: 48px;line-height: 120%;color: rgba(45, 54, 70, 1);width: 80%;}
+.claimed_success_component p {font-family: Inter;font-weight: 400;font-style: Regular;font-size: 16px;line-height: 150%;color: rgba(102, 105, 109, 1);}
+.my_balance_btn {width: max-content;float: right;margin: 0 auto;}
+.my_balance_btn a {padding: 12px 36px;}
+
+@keyframes successBounce {
+  0% {transform: scale(0);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+@keyframes successPulse {
+  0%,
+  100% {transform: scale(1);}
+  50% {transform: scale(1.05);}
+}
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+@keyframes slideOut {
+  from {opacity: 1;transform: translateY(0);}
+  to {opacity: 0;transform: translateY(-20px);}
+}
+@keyframes slideInRight {
+  from {transform: translateX(100%);opacity: 0;}
+  to {transform: translateX(0);opacity: 1;}
+}
+@keyframes slideOutRight {
+  from {transform: translateX(0);opacity: 1;}
+  to {transform: translateX(100%);opacity: 0;}
+}
+
+/* Responsiveness */
+@media (max-width: 640px) {
+  .upload-box {padding: 2rem 1rem;}
+  .upload-title {font-size: 14px;line-height: 16px;}
+  .files-preview {padding: 1rem;}
+  .file-item {text-align: center;gap: 0.75rem;}
+  .file-preview {margin-right: 0;    width: 40px;height: 40px;}
+  .file-actions {justify-content: center;}
+
+  .claim_rebaid_component h1 {font-size: 32px;}
+  .claim_rebaid_component p {font-size: 14px;text-align: center;}
+  .claim_rebaid_component {padding: 40px 0;row-gap: 30px;max-width: 650px;}
+  .claim_product_list {flex-direction: column; padding-bottom: 36px;}
+  .claim_product_list .claim_data img {height: auto;width: 100%;object-fit: cover;}
+  .claim_price p{text-align: left !important;}
+  .claim_lists {row-gap: 36px;}
+  .file_name_size {align-items: flex-start;}
+  .file-name {font-size: 14px;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+  .file-size {font-size: 14px;}
+  .submit_claim_btn {width: 100%;}
+  .file-progress-percent {font-size: 12px;}
+  .file-progress-bar {height: 8px;}
+  .claimed_success_component h1 {font-size: 32px;width: 80%;font-weight: 500;}
+  .my_balance_btn {width: 100%;}
+}
+@media (max-width: 480px) {
+  .redemption-container input {padding: 12px 15px;font-size: 14px;width: 200px;}
+  .redemption-container button {padding: 0 18px;font-size: 14px;}
+}
