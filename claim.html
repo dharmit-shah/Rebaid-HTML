@@ -58,35 +58,15 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 2 -->
-            <div class="claim_product_list">
-                <div class="claim_data">
-                    <img src="./assets/img/product-1.svg" alt="">
-                </div>
-                <div class="claim_desc">
-                    <h4>3-Pack jewelry box, jewelry boxes for women & travel jewelry organizer with Mirror & Small
-                        Jewelry
-                        Box, DoubleLayer jewelry organizer box GiftsGirlfriend Wife Ideal Gift</h4>
-                    <div class="seller_desc">
-                        <h6>Seller:</h6>
-                        <p>Rebaid</p>
-                    </div>
-                    <div class="seller_desc">
-                        <h6>Redemption ID:</h6>
-                        <p>Redemption2025</p>
-                    </div>
-                    <div class="claim_price">
-                        <h3>$14.50</h3>
-                        <p>Rebate Available</p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Upload File  -->
         <div class="container">
             <div class="upload-container">
+                <div class="upload_title">
+                    <h4>Upload Survey</h4>
+                    <a href="#" class="tutorial-Click-here">View Tutorial</a>
+                </div>
                 <div class="upload-box" id="uploadBox">
                     <div class="upload-content">
                         <div class="upload-icon">
@@ -106,6 +86,50 @@
 
                 <div class="submit_claim_btn">
                     <a class="ShoppingMethod_btn" href="./claim-success.html" title="submit claim">submit claim</a>
+                </div>
+
+
+                <!-- Learn More Model -->
+                <div class="tutorial-custom-model-main">
+                    <div class="tutorial-custom-model-inner">
+                        <div class="tutorial-custom-model-wrap">
+                            <div class="tutorial-pop-up-content-wrap">
+
+                                <div class="announce_title">
+                                    <div class="tutorial_banner">
+                                        <h1>Upload Tutorial</h1>
+                                        <div class="tutorial-close-btn close_bar">x</div>
+                                    </div>
+                                    <p>Keep the top part of the form. It includes your Redemption ID, offer details, and
+                                        terms—important for reference and proof of your rebate claim.</p>
+                                </div>
+
+                                <div class="tutorial_data">
+
+                                    <div class="tutorial_desc">
+                                        <div class="stub_box">
+                                            <h4>Keep Stub</h4>
+                                            <p>Save the top part — it includes your Redemption ID and offer info for
+                                                future reference.</p>
+                                        </div>
+                                        <div class="tutorial_mobile_img">
+                                            <img src="./assets/img/upload-tutorial-mobile.jpg" alt="">
+                                        </div>
+                                        <div class="stub_box">
+                                            <h4>Submit Form</h4>
+                                            <p>Fill out the bottom section, take a clear photo, and upload it using this
+                                                form.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tutorial_img">
+                                        <img src="./assets/img/upload-tutorial.jpg" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial-bg-overlay"></div>
                 </div>
             </div>
         </div>
@@ -333,6 +357,14 @@
         document.head.appendChild(style);
         document.addEventListener('DOMContentLoaded', () => { fileUpload = new FileUploadComponent(); });
         if (typeof module !== 'undefined' && module.exports) { module.exports = FileUploadComponent; }
+    </script>
+
+    <!-- Announcement Bar JS -->
+    <script>
+        function Hide(HideID) { HideID.style.display = "none"; }
+        // Learn More Popup
+        $(".tutorial-Click-here").on('click', function () { $(".tutorial-custom-model-main").addClass('tutorial-model-open'); });
+        $(".tutorial-close-btn, .tutorial-bg-overlay").click(function () { $(".tutorial-custom-model-main").removeClass('tutorial-model-open'); });
     </script>
 </body>
 

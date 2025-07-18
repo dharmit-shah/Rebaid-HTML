@@ -37,7 +37,7 @@
     .prodct_data{flex-direction: column;}
     .custom_width {width: calc(80% - 10px);}
     .addition_response{flex-direction: column;align-items: flex-start;}
-    .shopping_cart_component {padding: 24px 20px;flex-direction: column-reverse;row-gap: 48px;}
+    .shopping_cart_component {padding: 24px 20px;flex-direction: column;row-gap: 48px;}
     .pe-5 {padding-right: 0rem !important;}
     .order_summery_component{width:100%}
     .card_lists{gap: 1rem !important;}
@@ -58,4 +58,25 @@
     .news-pop-up-content-wrap p {line-height: 140%;}
     .announce_box{flex-direction: column;align-items: flex-start !important;text-align: left;}
     .announce_desc {gap: 4px;}
+    .upload_title h4 {font-weight: 600;font-style: SemiBold;font-size: 24px;}
+    .upload_title p {font-weight: 500;font-style: Medium;font-size: 16px;}
+    .tutorial-pop-up-content-wrap p{text-align: left;}
+    /* .tutorial_desc{display: none;} */
+    .tutorial_img{display: none;}
+    .tutorial_mobile_img{display: flex;}
+    .tutorial_mobile_img img{width: 100%;}
+    .tutorial_desc{flex-direction: column;display: flex;}
+    .tutorial_desc {width: 100%;}
+    .tutorial_desc .stub_box:first-child {height: auto;margin-top: 0px;}
+    .tutorial_desc .stub_box:last-child {height: auto;}
+    .stub_box {border-left: 1px solid #2D36461A;padding-left: 16px;border-top: none;margin-left: 36px;}
+    .claim_reward_box, .shop_rebaid_box, .trustpilot_rate_box{width: calc(100% - 0px);}
+    .feature_banner_section{flex-direction: column;width: 100%;gap: 20px;}
+    .shop_rebaid_box {padding: 0px;border-top: 1px solid #FFFFFF4D;border-bottom: 1px solid #FFFFFF4D;row-gap: 4px;display: flex;flex-direction: column;
+    border-left: none;border-right: none;padding: 20px 0;}
+    .claim_reward_box{padding: 0px;row-gap: 4px;display: flex;flex-direction: column;}
+    .trustpilot_rate_box{padding: 0px;row-gap: 4px;display: flex;flex-direction: row;align-items: center;}
+    .feature_banner_section p {text-align: center;}
+    .reward_div .quote_img{display: none;}
+    .claim_rewards_reponse {width: 100%;text-align: center;display: flex;align-items: center;justify-content: center;}
 }

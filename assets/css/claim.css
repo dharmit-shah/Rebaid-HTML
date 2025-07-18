@@ -1,4 +1,4 @@
-.claim_rebaid_component {display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 80px 0;row-gap: 64px;max-width: 650px;}
+.claim_rebaid_component {display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 80px 0;row-gap: 48px;max-width: 650px;}
 .claim_title {display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap: 12px;background-image: url(../img/claim_bg_desktop.svg);background-repeat: no-repeat;}
 .claim_rebaid_component h1 {color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 500;font-size: 48px;}
 .claim_rebaid_component p {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 400;font-style: Regular;font-size: 16px;}
