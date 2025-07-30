@@ -326,3 +326,7 @@ input:checked ~ .tab-content{max-height:100vh;padding:1em}
 .feature_banner_section p{font-family: Inter;font-weight: 400;font-style: Regular;font-size: 14px;color: #FFFFFFB2;}
 .shop_width{width: max-content;gap: 10px;}
 .trustpilot_rate_box .review_img{width: 100%;}
+/* Inbuilt CSS - Need to delete later */
+@media only screen and (max-width: 1330px) {
+  .large-container {padding: 0 15px;width: 100%;}
+}

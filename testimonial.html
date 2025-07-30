@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebaid - Testimonials</title>
+
+    <link rel="stylesheet" href="./assets/css/testimonial.css">
+
+    <!-- Master Pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+        $(function () { $("#header").load("header.html"); $("#footer").load("footer.html"); });
+    </script>
+
+    <!-- stars icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="header"></div>
+
+    <section class="large-container testimonial_component">
+        <div class="testimonial_title">
+            <h2>What People Say</h2>
+            <p>Real stories from buyers and sellers who save, sell, and succeed with Rebaid.</p>
+        </div>
+        <div class="add_testimonial_btn d-flex" id="submitBtn">
+            <div class="form-group">
+                <a class="ShoppingMethod_btn testimonial-Click-here" href="#" title="Share your story">Share your
+                    story</a>
+            </div>
+        </div>
+
+        <!-- Add Testimonial Model -->
+        <div class="testimonial-custom-model-main">
+            <div class="testimonial-custom-model-inner">
+                <div class="testimonial-custom-model-wrap">
+                    <div class="testimonial-pop-up-content-wrap">
+                        <div
+                            class="d-flex testimonial_banner justify-content-between align-items-center w-100 position-relative">
+                            <h4>Add new testimonial</h4>
+                            <div class="testimonial-close-btn testimonialclose_bar">x</div>
+                        </div>
+                        <div class="add_testi_review_name">
+                            <img src="./assets/img/testi-profile-3.svg" alt="Darlene Robertson">
+                            <div class="add_review_person_name">
+                                <h4>Darlene Robertson</h4>
+                                <p>Columbus, GA</p>
+                            </div>
+                        </div>
+
+                        <div class="star-widget">
+                            <form method="" name="feedback" action="#" onsubmit="feedBack(); return false">
+                                <div class="review_stars">
+                                    <input type="radio" name="star" id="rate-5" value="5">
+                                    <label for="rate-5" class="fa-solid fa-star"></label>
+                                    <input type="radio" name="star" id="rate-4" value="4">
+                                    <label for="rate-4" class="fa-solid fa-star"></label>
+                                    <input type="radio" name="star" id="rate-3" value="3">
+                                    <label for="rate-3" class="fa-solid fa-star"></label>
+                                    <input type="radio" name="star" id="rate-2" value="2">
+                                    <label for="rate-2" class="fa-solid fa-star"></label>
+                                    <input type="radio" name="star" id="rate-1" value="1">
+                                    <label for="rate-1" class="fa-solid fa-star"></label>
+                                </div>
+                                <div class="review-textarea">
+                                    <label for="comment">Testimonial</label>
+                                    <textarea rows="3" id="comment" placeholder="Enter your testimonial"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="d-flex gap-3 justify-content-end align-items-center w-100">
+                            <a class="cancel_checkout testimonial-close-btn" href="javascript:void(0)"
+                                title="Cancel">Cancel</a>
+                            <a class="testimonial-leave_checkout signup-Click-here" href="javascript:void(0)"
+                                title="Add testimonial">
+                                Add testimonial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-bg-overlay"></div>
+        </div>
+
+        <!-- signup Model -->
+        <div class="signup-custom-model-main">
+            <div class="signup-custom-model-inner">
+                <div class="signup-custom-model-wrap">
+                    <div class="signup-pop-up-content-wrap">
+                        <img src="./assets/img/profile-account.svg" alt="profile-account">
+
+                        <p>Please sign in to your account to share your experience by writing a testimonial.We'd love
+                            to hear your feedback!</p>
+
+                        <div class="d-flex gap-3 justify-content-end align-items-center w-100">
+                            <a class="cancel_checkout signup-close-btn" href="javascript:void(0)"
+                                title="Cancel">Cancel</a>
+                            <a class="signup-leave_checkout login-Click-here" href="./sign-in.html"
+                                title="Go to sign in">
+                                Go to sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="signup-bg-overlay"></div>
+        </div>
+    </section>
+
+    <section class="testimonial_cards_section large-container">
+        <div class="testimonial_slider">
+            <!-- 1 -->
+            <div class="testimonial_card">
+                <div class="testi_title">
+                    <img src="./assets/img/quote-icon.svg" alt="quote-icon">
+                    <div class="testi_review">
+                        <p>5.0</p>
+                        <img src="./assets/img/star.svg" alt="Star">
+                    </div>
+                </div>
+                <div class="testi_desc">
+                    <p>When I heard about this site giving rebates up to 100% making products free or almost free with
+                        no
+                        membership fee it sounded to good to be true. The site was user friendly making my ordering
+                        process
+                        simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp
+                        and
+                        rebate check within days of ordering.</p>
+                </div>
+                <div class="testi_review_name">
+                    <img src="./assets/img/testi-profile-1.svg" alt="Darlene Robertson">
+                    <div class="review_person_name">
+                        <h4>Darlene Robertson</h4>
+                        <p>Columbus, GA</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="testimonial_card">
+                <div class="testi_title">
+                    <img src="./assets/img/quote-icon.svg" alt="quote-icon">
+                    <div class="testi_review">
+                        <p>5.0</p>
+                        <img src="./assets/img/star.svg" alt="Star">
+                    </div>
+                </div>
+                <div class="testi_desc">
+                    <p>When I heard about this site giving rebates up to 100% making products free or almost free with
+                        no
+                        membership fee it sounded to good to be true. The site was user friendly making my ordering
+                        process
+                        simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp
+                        and
+                        rebate check within days of ordering.</p>
+                </div>
+                <div class="testi_review_name">
+                    <img src="./assets/img/testi-profile-2.svg" alt="Cristin Watson">
+                    <div class="review_person_name">
+                        <h4>Cristin Watson</h4>
+                        <p>Columbus, GA</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="testimonial_card">
+                <div class="testi_title">
+                    <img src="./assets/img/quote-icon.svg" alt="quote-icon">
+                    <div class="testi_review">
+                        <p>5.0</p>
+                        <img src="./assets/img/star.svg" alt="Star">
+                    </div>
+                </div>
+                <div class="testi_desc">
+                    <p>When I heard about this site giving rebates up to 100% making products free or almost free with
+                        no
+                        membership fee it sounded to good to be true. The site was user friendly making my ordering
+                        process
+                        simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp
+                        and
+                        rebate check within days of ordering.</p>
+                </div>
+                <div class="testi_review_name">
+                    <img src="./assets/img/testi-profile-3.svg" alt="Arlene McCoy">
+                    <div class="review_person_name">
+                        <h4>Arlene McCoy</h4>
+                        <p>Columbus, GA</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="testimonial_card">
+                <div class="testi_title">
+                    <img src="./assets/img/quote-icon.svg" alt="quote-icon">
+                    <div class="testi_review">
+                        <p>5.0</p>
+                        <img src="./assets/img/star.svg" alt="Star">
+                    </div>
+                </div>
+                <div class="testi_desc">
+                    <p>When I heard about this site giving rebates up to 100% making products free or almost free with
+                        no
+                        membership fee it sounded to good to be true. The site was user friendly making my ordering
+                        process
+                        simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp
+                        and
+                        rebate check within days of ordering.</p>
+                </div>
+                <div class="testi_review_name">
+                    <img src="./assets/img/testi-profile-4.svg" alt="Jane Cooper">
+                    <div class="review_person_name">
+                        <h4>Jane Cooper</h4>
+                        <p>Columbus, GA</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="testimonial_card">
+                <div class="testi_title">
+                    <img src="./assets/img/quote-icon.svg" alt="quote-icon">
+                    <div class="testi_review">
+                        <p>5.0</p>
+                        <img src="./assets/img/star.svg" alt="Star">
+                    </div>
+                </div>
+                <div class="testi_desc">
+                    <p>When I heard about this site giving rebates up to 100% making products free or almost free with
+                        no
+                        membership fee it sounded to good to be true. The site was user friendly making my ordering
+                        process
+                        simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp
+                        and
+                        rebate check within days of ordering.</p>
+                </div>
+                <div class="testi_review_name">
+                    <img src="./assets/img/testi-profile-5.svg" alt="Jenny Wilson">
+                    <div class="review_person_name">
+                        <h4>Jenny Wilson</h4>
+                        <p>Columbus, GA</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="testimonial_card">
+                <div class="testi_title">
+                    <img src="./assets/img/quote-icon.svg" alt="quote-icon">
+                    <div class="testi_review">
+                        <p>5.0</p>
+                        <img src="./assets/img/star.svg" alt="Star">
+                    </div>
+                </div>
+                <div class="testi_desc">
+                    <p>When I heard about this site giving rebates up to 100% making products free or almost free with
+                        no
+                        membership fee it sounded to good to be true. The site was user friendly making my ordering
+                        process
+                        simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp
+                        and
+                        rebate check within days of ordering.</p>
+                </div>
+                <div class="testi_review_name">
+                    <img src="./assets/img/testi-profile-6.svg" alt="Albert Flores">
+                    <div class="review_person_name">
+                        <h4>Albert Flores</h4>
+                        <p>Columbus, GA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial_dots"></div>
+    </section>
+
+    <section class="large-container testimonial_component">
+        <div class="testimonial_title">
+            <h2>See It in Action</h2>
+            <p>Watch and learn how to shop smarter or sell faster with Rebaid.</p>
+        </div>
+    </section>
+
+    <section class="large-container youtube_component">
+        <div class="youtube_review">
+            <div class="youtube_video">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/9FoB58oIaZg?si=jpOj2b5AWLUsF3Nw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="youtube_video_description">
+                <p>When I heard about this site giving rebates up to 100% making products free or almost free with no
+                    membership fee it sounded to good to be true. The site was user friendly making my ordering process
+                    simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp and
+                    rebate
+                    check within days of ordering.
+                </p>
+                <h4>Rebaid Shopper Summer S. Makes a Great Demo Video!</h4>
+            </div>
+        </div>
+        <div class="youtube_review">
+            <div class="youtube_video">
+                <!-- While changing the real video, please setup width:100% in embeded code -->
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/TuKJHbcCL-Q?si=JsPwsQjO_QZctfO-"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="youtube_video_description">
+                <p>When I heard about this site giving rebates up to 100% making products free or almost free with no
+                    membership fee it sounded to good to be true. The site was user friendly making my ordering process
+                    simple. I was skeptical at first but to my surprise I received my beautiful ambient salt lamp and
+                    rebate
+                    check within days of ordering.
+                </p>
+                <h4>Rebaid Shopper Summer S. Makes a Great Demo Video!</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Convert testimonial card to slider  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slider = document.querySelector(".testimonial_slider");
+            const cards = document.querySelectorAll(".testimonial_card");
+            const dotsContainer = document.querySelector(".testimonial_dots");
+            let currentIndex = 0;
+            const totalSlides = cards.length;
+            for (let i = 0; i < totalSlides; i++) { const dot = document.createElement("button"); if (i === 0) dot.classList.add("active"); dot.addEventListener("click", () => scrollToSlide(i)); dotsContainer.appendChild(dot); }
+            const dots = dotsContainer.querySelectorAll("button");
+            function scrollToSlide(index) { const offset = cards[index].offsetLeft; slider.scrollTo({ left: offset, behavior: "smooth" }); updateDots(index); }
+            function updateDots(index) { dots.forEach(dot => dot.classList.remove("active")); dots[index].classList.add("active"); currentIndex = index; }
+            setInterval(() => { currentIndex = (currentIndex + 1) % totalSlides; scrollToSlide(currentIndex); }, 4000);
+            let scrollTimeout;
+            slider.addEventListener("scroll", () => { clearTimeout(scrollTimeout); scrollTimeout = setTimeout(() => { const scrollLeft = slider.scrollLeft; const slideWidth = cards[0].offsetWidth; const index = Math.round(scrollLeft / slideWidth); updateDots(index); }, 100); });
+        });
+    </script>
+
+    <!-- Add testimonail Popup -->
+    <script>
+        $(".testimonial-Click-here").on('click', function () { $(".testimonial-custom-model-main").addClass('testimonial-model-open'); });
+        $(".testimonial-close-btn, .testimonial-bg-overlay").click(function () { $(".testimonial-custom-model-main").removeClass('testimonial-model-open'); });
+
+        $(".signup-Click-here").on('click', function () { $(".signup-custom-model-main").addClass('signup-model-open'); });
+        $(".signup-close-btn, .signup-bg-overlay").click(function () { $(".signup-custom-model-main").removeClass('signup-model-open'); });
+    </script>
+
+    <!-- star rating -->
+    <script>
+        function feedBack() {
+            if (document.getElementById('comment').value === '') { document.getElementById('error-comment').innerHTML = "* Please enter comment"; }
+            else { document.getElementById('error-comment').innerHTML = ""; }
+            if ($("input[type=radio]:checked").val() === 'undefined') { document.getElementById('error-rating').innerHTML = "* Please choose any star"; alert('Please choose any star'); }
+            else { document.getElementById('error-rating').innerHTML = ""; }
+            var rating_Count = document.querySelector("input[name=star]:checked").value;
+            var comment = document.getElementById('comment').value;
+            $("#simpleModal").modal('show');
+            console.log(comment);
+            console.log(rating_Count);
+            document.getElementById('comment_text').innerHTML = comment;
+            document.getElementById('star_count').innerHTML = rating_Count;
+        }
+    </script>
+
+</body>
+
+</html>

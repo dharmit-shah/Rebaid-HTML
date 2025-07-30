@@ -1,0 +1,172 @@
+/* Inbuilt CSS - Need to delete later */
+.large-container {max-width: 1330px;margin: 0 auto;width: 1330px;}
+h3, h4 {font-weight: 500;color: #000;float: left;width: 100%;}
+a, div, h1, h2, h3, h4, h5, h6, img, p {text-decoration: none;padding: 0;margin: 0;font-weight: 400;}
+/*  */
+/* testimonial CSS */
+.testimonial_component {display: flex;flex-direction: column;width: 100%;align-items: center;justify-content: center;text-align: center;padding: 60px 0;gap: 24px;}
+.testimonial_title {background-image: url(../img/testi_title_bg.svg);background-repeat: no-repeat;background-position: center;}
+.testimonial_title h2 {font-family: Inter;font-size: 48px;text-align: center;color: rgba(45, 54, 70, 1);}
+.testimonial_title p {font-family: Inter;font-weight: 400;font-size: 16px;text-align: center;color: rgba(102, 105, 109, 1);}
+.add_testimonial_btn {width: auto;justify-content: center;}
+.testimonial_cards_section {display: flex;flex-wrap: wrap;gap: 24px;}
+.testimonial_card {border: 1px solid rgba(235, 236, 240, 1);border-radius: 8px;padding: 24px;width: calc(33% - 16px);display: flex;flex-direction: column;gap: 30px;justify-content: space-between;}
+.testi_title {display: flex;justify-content: space-between;}
+.testi_review {display: flex;align-items: center;gap: 10px;}
+.testi_desc p {font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(102, 105, 109, 1);display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+.testi_review_name {display: flex;gap: 10px;padding-top: 30px;border-top: 1px solid rgba(235, 236, 240, 1);}
+.review_person_name {display: flex;flex-direction: column;gap: 4px;}
+.review_person_name h4 {font-family: Inter;font-weight: 500;font-size: 20px;line-height: 24px;color: rgba(46, 55, 70, 1);}
+.review_person_name p {font-family: Inter;font-weight: 400;font-size: 16px;line-height: 24px;color: rgba(102, 105, 109, 1);}
+.testi_review_name img {height: 50px;width: 50px;border-radius: 50px;object-fit: cover;}
+.youtube_review {display: flex;gap: 24px;align-items: center;}
+.youtube_video {width: calc(50% - 16px);border-radius: 10px;}
+.youtube_video iframe {border-radius: 10px;}
+.youtube_video_description {display: flex;gap: 24px;flex-direction: column;width: calc(50% - 16px);flex-wrap: wrap;}
+.youtube_video_description p {font-family: Inter;font-weight: 400;font-size: 18px;color: rgba(102, 105, 109, 1);}
+.youtube_video_description h4 {font-family: Inter;font-weight: 500;font-size: 20px;line-height: 24px;color: rgba(46, 55, 70, 1);border-top: 1px solid rgba(0, 219, 177, 1);padding-top: 24px;}
+.youtube_component {display: flex;flex-direction: column;gap: 50px;padding-bottom: 40px !important;}
+.testimonial_slider {display: flex;flex-wrap: wrap;gap: 24px;}
+.testimonial_card {width: calc(33.33% - 16px);box-sizing: border-box;}
+.testimonial_dots {display: none;}
+.testimonial_dots button {width: 1px;height: 10px;border-radius: 50%;border: none;background-color: rgba(235, 236, 240, 1);transition: background-color 0.3s ease;}
+.testimonial_dots button.active {background-color: rgba(0, 219, 177, 1);width: 26px;border-radius: 10px;}
+/* popup */
+.testimonial-Click-here {cursor: pointer;color: #fff;text-align: center;font-size:16px;transition:background-image 3s ease-in-out;}
+.testimonial-Click-here:hover{transition:background-image 3s ease-in-out;}
+.testimonial-custom-model-main {text-align: center;overflow: hidden;position: fixed;top: 0;right: 0;bottom: 0;left: 0;-webkit-overflow-scrolling: touch;outline: 0;opacity: 0;-webkit-transition: opacity 0.15s linear, z-index 0.15;-o-transition: opacity 0.15s linear, z-index 0.15;transition: opacity 0.15s linear, z-index 0.15;z-index: -1;overflow-x: hidden;overflow-y: auto;}
+.testimonial-model-open {z-index: 99999;opacity: 1;overflow: hidden;}
+.testimonial-custom-model-inner {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);transition: transform 0.3s ease-out,;display: inline-block;vertical-align: middle;width: 450px;margin: 30px auto;max-width: 97%;}
+.testimonial-custom-model-wrap {display: block;width: 100%;position: relative;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 8px;background-clip: padding-box;outline: 0;text-align: left;padding: 24px;box-sizing: border-box;max-height: calc(100vh - 60px);overflow-y: auto;}
+.testimonial-model-open .testimonial-custom-model-inner {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0%, 5%);position: relative;z-index: 999;}
+.testimonial-model-open .testimonial-bg-overlay {background: rgba(0, 0, 0, 0.6);z-index: 99;}
+.testimonial-bg-overlay {background: rgba(0, 0, 0, 0);height: 100vh;width: 100%;position: fixed;left: 0;top: 0;right: 0;bottom: 0;z-index: 0;-webkit-transition: background 0.15s linear;-o-transition: background 0.15s linear;transition: background 0.15s linear;}
+.testimonial-close-btn {cursor: pointer;z-index: 99;color: #fff;}
+.testimonial-pop-up-content-wrap{text-align: center;align-items: center;display: flex;flex-direction: column;gap: 24px;}
+.testimonial-pop-up-content-wrap h2{font-weight: 600;font-size: 20px;line-height: 18px;color: rgba(45, 54, 70, 1);}
+.testimonial-pop-up-content-wrap p{font-weight: 400;font-size: 14px;line-height: 18px;color: rgba(102, 105, 109, 1);}
+.testimonial-cancel_checkout{font-weight: 500;font-size: 14px;line-height: 20px;color: rgba(46, 55, 70, 1);text-decoration: none;}
+.testimonial-leave_checkout{width: fit-content;height: 36px;border-radius: 100px;padding-top: 8px;padding-right: 24px;padding-bottom: 8px;padding-left: 24px;gap: 10px;background: rgba(0, 219, 177, 1);color: rgba(45, 54, 70, 1);text-decoration: none;font-weight: 500;font-size: 14px;}
+.testimonialclose_bar{filter: invert(1);font-size:22px;}
+/* sign up model */
+.signup-Click-here {cursor: pointer;color: rgba(45, 54, 70, 1);;text-align: center;font-size:16px;transition:background-image 3s ease-in-out;}
+.signup-Click-here:hover{transition:background-image 3s ease-in-out;}
+.signup-custom-model-main {text-align: center;overflow: hidden;position: fixed;top: 0;right: 0;bottom: 0;left: 0;-webkit-overflow-scrolling: touch;outline: 0;opacity: 0;-webkit-transition: opacity 0.15s linear, z-index 0.15;-o-transition: opacity 0.15s linear, z-index 0.15;transition: opacity 0.15s linear, z-index 0.15;z-index: -1;overflow-x: hidden;overflow-y: auto;}
+.signup-model-open {z-index: 99999;opacity: 1;overflow: hidden;}
+.signup-custom-model-inner {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);transition: transform 0.3s ease-out,;display: inline-block;vertical-align: middle;width: 450px;margin: 30px auto;max-width: 97%;}
+.signup-custom-model-wrap {display: block;width: 100%;position: relative;background-color: #fff;border: 1px solid #999;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 8px;background-clip: padding-box;outline: 0;text-align: left;padding: 24px;box-sizing: border-box;max-height: calc(100vh - 60px);overflow-y: auto;}
+.signup-model-open .signup-custom-model-inner {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0%, 5%);position: relative;z-index: 999;}
+.signup-model-open .signup-bg-overlay {background: rgba(0, 0, 0, 0.6);z-index: 99;}
+.signup-bg-overlay {background: rgba(0, 0, 0, 0);height: 100vh;width: 100%;position: fixed;left: 0;top: 0;right: 0;bottom: 0;z-index: 0;-webkit-transition: background 0.15s linear;-o-transition: background 0.15s linear;transition: background 0.15s linear;}
+.signup-close-btn {cursor: pointer;z-index: 99;color: #fff;}
+.signup-pop-up-content-wrap{text-align: center;align-items: center;display: flex;flex-direction: column;gap: 24px;}
+.signup-pop-up-content-wrap h2{font-weight: 600;font-size: 20px;line-height: 18px;color: rgba(45, 54, 70, 1);}
+.signup-pop-up-content-wrap p{font-family: Inter;font-weight: 500;font-size: 16px;line-height: 24px;color: rgba(46, 55, 70, 1)}
+.signup-cancel_checkout{font-weight: 500;font-size: 14px;line-height: 20px;color: rgba(46, 55, 70, 1);text-decoration: none;}
+.signup-leave_checkout{width: fit-content;height: 36px;border-radius: 100px;padding-top: 8px;padding-right: 24px;padding-bottom: 8px;padding-left: 24px;gap: 10px;background: rgba(0, 219, 177, 1);color: rgba(45, 54, 70, 1);text-decoration: none;font-weight: 500;font-size: 14px;}
+.signupclose_bar{filter: invert(1);font-size:22px;}
+/*  */
+.testi_desc p {font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(102, 105, 109, 1);display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+.add_testi_review_name {display: flex;gap: 10px;width: 100%;}
+.add_testi_review_name img {height: 50px;width: 50px;border-radius: 50px;object-fit: cover;}
+.add_review_person_name {display: flex;flex-direction: column;gap: 4px;}
+.add_review_person_name h4 {font-family: Inter;font-weight: 500;font-size: 20px;line-height: 24px;color: rgba(46, 55, 70, 1);}
+.add_review_person_name p {font-family: Inter;font-weight: 400;font-size: 16px;line-height: 24px;color: rgba(102, 105, 109, 1);width: fit-content;}
+.testimonial_banner h4{width: auto;font-family: Inter;font-weight: 600;font-size: 20px;line-height: 18px;color: rgba(46, 55, 70, 1);}
+.star-widget{width: 100%;}
+.star-widget input {display: none;}
+.star-widget label {font-size: 30px;color: #fff;padding: 10px;float: right;transition: all .2s ease;text-shadow: 0px 0px 0 #36bb91, 1px -1px 0 #36bb91, -2px 0px 0 #36bb91, 1px 1px 0 #36bb91;}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
+input:checked ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
+.review-textarea{display: flex;flex-direction: column;align-items: flex-start;gap: 10px;}
+.review-textarea textarea {border: 1px solid #e4e5e7;background: white;color: #6C6C6E;padding: 10px;font-size: 16px;border-radius: 10px;resize: none;width: 100%;}
+.review-textarea label{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: rgba(46, 55, 70, 1);text-shadow: none;padding: 0;}
+.review-textarea textarea:focus {border-color: #36bb91 !important;background: white;color: #1a1a1a;outline: none;}
+.review_stars{width: 100%;display: flex;flex-direction: row-reverse;justify-content: center;}
+.star-widget form{display: flex;flex-direction: column;gap: 24px;}
+/* SignIn page */
+.signin_section{display: flex;gap: 24px;padding: 40px 0;}
+.signin_form{width: calc(50% - 10px);padding: 0 80px;display: flex;flex-direction: column;gap: 16px;}
+.signin_slider{width: calc(50% - 10px);}
+.signin_title{display: flex;flex-direction: column;gap: 10px;}
+.signin_title h1{font-family: Inter;font-weight: 500;font-size: 48px;color: rgba(45, 54, 70, 1);}
+.signin_title p{font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(102, 105, 109, 1);}
+.signin_fields{display: flex;flex-direction: column;gap: 14px;}
+.remember_password{display: flex;justify-content: space-between;}
+.password_checkbox{display: flex;gap: 10px;}
+.custom-checkbox {display: inline-block;position: relative;cursor: pointer;user-select: none;}
+.custom-checkbox input {display: none;}
+.custom-checkbox .checkmark {display: inline-block;width: 24px;height: 24px;background-color: #fff;border: 2px solid rgba(235, 236, 240, 1);border-radius: 50px;transition: all 0.2s ease;position: relative;}
+.custom-checkbox .checkmark::after {content: "";position: absolute;display: none;}
+.custom-checkbox input:checked + .checkmark::after {display: block;left: 7px;top: 3px;width: 6px;height: 12px;border: solid rgba(45, 54, 70, 1);border: 2px solid rgba(45, 54, 70, 1);border-width: 0 2px 2px 0;transform: rotate(45deg);}
+.custom-checkbox input:checked + .checkmark {border: 2px solid rgba(45, 54, 70, 1);}
+.forget_password a{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: rgba(46, 55, 70, 1);text-decoration: none;}
+.google_signin_btn {gap:10px;border: 1px solid #00dbb1ff;border-radius: 100px;padding: 16px 24px;display: flex;align-items: center;justify-content: center;text-decoration: none;color: #2d3646ff;text-transform: uppercase;font-weight: 600;font-size: 16px;}
+.signIn_form_field{display: flex;flex-direction: column;gap: 16px;}
+.signin_buttons{display: flex;flex-direction: column;gap: 16px;}
+.signin_terms{display: flex;gap: 6px;text-align: center;align-items: center;justify-content: center;flex-wrap: wrap;line-height: 8px;}
+.signin_terms p{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: rgba(46, 55, 70, 1);}
+.signin_terms a{font-family: Inter;font-weight: 500;font-size: 14px;color: rgba(46, 55, 70, 1);}
+/* signin slider */
+.custom-slider {width: 100%;overflow: hidden;position: relative;}
+.slider-track {display: flex;transition: transform 0.4s ease-in-out;}
+.slide {min-width: 100%;box-sizing: border-box;}
+.slide img {width: 100%;display: block;}
+.slider-dots {display: flex;justify-content: center;margin-top: 12px;gap: 10px;position: absolute;bottom: 30px;width: 100%;}
+.slider_nav_box .dot {width: 12px;height: 12px;border-radius: 50%;border: none;background-color: #fff;cursor: pointer;transition: background-color 0.3s ease;}
+.slider_nav_box .dot.active {background-color: rgba(0, 219, 177, 1);}
+.slider_nav_box .dot.active::before {content: "";position: relative;top: -8px;left: -13px;width: 26px;height: 26px;background-color: rgba(0, 210, 178, 0.3);border-radius: 50%;z-index: 1;display: block;}
+.slider_nav_box{background-color: rgba(0, 219, 177, 0.16);width: fit-content;padding: 14px 30px;border-radius: 100px;display: flex;gap:20px;}
+.signin_Method_btn {background-color: #00dbb1ff;border-radius: 100px;padding: 16px 24px;display: flex;align-items: center;justify-content: center;text-decoration: none;color: #2d3646ff;text-transform: uppercase;font-weight: 600;font-size: 16px;}
+/* sign up page */
+.signup_selection_box{display: flex;gap: 24px;}
+.seller_box, .buyer_box{border: 1px solid rgba(0, 219, 177, 1);border-radius: 8px;padding: 36px;display: flex;align-items: center;justify-content: center;flex-direction: column;gap: 10px;border-color: rgba(241, 243, 243, 1);}
+.seller_box h4, .buyer_box h4{width: fit-content;font-family: Inter;font-weight: 500;font-size: 20px;text-align: center;color: rgba(46, 55, 70, 1);}
+.signIn_form_field h2{font-family: Inter;font-weight: 500;font-size: 20px;color: rgba(46, 55, 70, 1);}
+.signup_selection_box {display: flex;gap: 20px;}
+.select_box {cursor: pointer;width: 100%;}
+.select_box input[type="radio"] {display: none;}
+.select_box input[type="radio"]:checked + .box {background-color: rgba(237, 254, 242, 1);border-color: rgba(0, 219, 177, 1);}
+/* password UI */
+.password-wrapper {position: relative;}
+.toggle-password {position: absolute;top: 50%;right: 10px;transform: translateY(-50%);width: 20px;height: 20px;cursor: pointer;transition: opacity 0.2s;}
+.toggle-password.blinking {animation: blink 0.3s ease-in-out 2;}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.testimonial-custom-model-main.testimonial-model-open:has(~ .signup-custom-model-main.signup-model-open) {
+  opacity: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    /* testimonial CSS */
+    .testimonial_slider {display: flex;flex-wrap: nowrap;overflow-x: auto;scroll-snap-type: x mandatory;scroll-behavior: smooth;-webkit-overflow-scrolling: touch;}.testimonial_card {flex: 0 0 100%;min-width: 100%;scroll-snap-align: start;width: 100%;}
+    .testimonial_slider::-webkit-scrollbar {display: none;}
+    .testimonial_dots {display: flex;justify-content: center;gap: 8px;}
+    .testimonial_cards_section {justify-content: center;}
+    .testimonial_title h2 {font-size: 32px;padding: 40px 0 0 0;}
+    .add_testimonial_btn {margin-bottom: 30px;}
+    .youtube_video {width: calc(100%);border-radius: 10px;}
+    .youtube_video_description {width: 100%;}
+    .youtube_review {flex-direction: column;}
+    .youtube_video_description p {font-weight: 400;font-size: 14px;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+    .youtube_video_description h4 {font-weight: 500;font-size: 18px;line-height: 24px;}
+    .custom-slider {max-width: 100%;}
+    .signin_section{flex-direction: column;}
+    .signin_form{width: 100%;padding: 0 00px;}
+    .signin_slider{width: 100%;}
+    .signin_title h1 {font-weight: 500;font-size: 32px;}
+    .slider_nav_box {padding: 10px 20px;}
+    .slider-dots {bottom: 5px;}
+    .slider_nav_box .dot.active::before {top: -5px;left: -10px;width: 20px;height: 20px;}
+    .signin_terms p {font-size: 12px;}
+    .signin_terms a {font-size: 12px;}
+    .signin_Method_btn {padding: 12px 24px;font-size: 14px;}
+    .google_signin_btn {padding: 12px 24px;font-size: 14px;}
+    .seller_box, .buyer_box {padding: 20px;}
+    .signin_terms{justify-content: flex-start;}
+}
