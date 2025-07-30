@@ -1,0 +1,95 @@
+@font-face {font-family: "Helvetica";src: url("./asset/font/helvetica-light.ttf") format("truetype");font-weight: 400;font-style: normal;}
+@font-face {font-family: "Helvetica";src: url("./asset/font/helvetica-regular.ttf") format("truetype");font-weight: 500;font-style: normal;}
+@font-face {font-family: "Helvetica";src: url("./asset/font/helvetica-Bold.ttf") format("truetype");font-weight: 600;font-style: normal;}
+
+.rebaid_promotion_component {max-width: 800px;font-family: "Helvetica";margin: 0 auto;display: flex;row-gap: 24px;flex-direction: column;padding: 16px 0 0 0;}
+.promotion_bar {background-color: #2b2d32;padding: 6px;display: flex;align-items: center;justify-content: center;}
+.promotion_bar h2 {color: #fff;font-family: "Helvetica";margin: 0;font-weight: 600;font-size: 22px;letter-spacing: 0.9px;}
+.promotion_discard_box {padding: 20px;border: 2px dashed #2b2d32;border-radius: 8px;text-align: center;display: flex;flex-direction: column;gap: 16px;}
+.promotion_discard_box h1, .promotion_discard_box h2 {font-family: "Helvetica";margin: 0;}
+.promotion_discard_box h1 {font-size: 40px;font-weight: 600;}
+.promotion_discard_box h2 {font-size: 32px;font-weight: 600;letter-spacing: 0.57px;}
+.rebaid_offer_box {text-align: center;display: flex;flex-direction: column;row-gap: 10px;padding: 14px;border: 3px solid #2b2d32;border-radius: 4px;}
+.rebaid_offer {display: flex;column-gap: 6px;text-align: center;width: 100%;align-items: center;justify-content: center;}
+.rebaid_offer h2 {font-family: "Helvetica";font-size: 24px;font-weight: 600;margin: 0;}
+.rebaid_offer p {font-family: "Helvetica";font-size: 24px;font-weight: 600;margin: 0;}
+.rebaid_desc {font-family: "Helvetica";margin: 0;font-size: 18px;}
+.complain_box_component {display: flex;gap: 44px;}
+/* .claim_online_box, .complain_online_box, .survey_form_box {width: calc(50% - 0px);} */
+.claim_online_box, .complain_online_box {width: calc(50% - 0px);}
+.claim_online_box p {font-size: 12px;line-height: 24px;margin-top: 0;}
+.survey_box_component {display: flex;justify-content: space-between;gap: 30px;}
+.claim_online_box p a {font-weight: 600;font-size: 20px;color: #000;text-decoration: none;}
+.complain_online_box p {font-size: 12px;line-height: 24px;margin-top: 0;}
+.complain_online_box p a {font-weight: 600;font-size: 20px;color: #000;text-decoration: none;}
+.survey_desc {font-weight: 600;font-size: 12px;}
+.seperater_line {border: 1px solid #2b2d32;height: 240px;}
+.claim_address {font-size: 20px !important;font-weight: 500;line-height: 28px !important;}
+.remove_stubs {text-align: center;font-size: 14px;padding-bottom: 20px;border-bottom: 1px dashed #2b2d32;margin: 0;}
+.remove_stubs a {color: #000;text-decoration: none;}
+.survey_title {display: flex;gap: 10px;align-items: center;}
+.survey_title p {margin: 0;}
+.survey_title h2 {margin: 0;}
+.survey_form_box .survey_description {font-size: 12px;line-height: 24px;margin-top: 0;margin-bottom: 0;}
+/* .survey_form_box {display: flex;flex-direction: column;row-gap: 10px;} */
+.survey_form_box form ol {padding-left: 0px;margin: 0;}
+.survey_form_box form ol li {font-size: 12px;font-weight: 600;margin-top: 16px;list-style: none;}
+.form_checkbox {display: flex;gap: 6px;align-items: center;justify-content: center;margin-top: 6px;}
+.form_checkbox label {font-size: 12px;font-weight: 600;}
+.form_answer, .form_answer_rate {display: flex;gap: 24px;}
+.form_answer_rate {display: flex;justify-content: space-between;}
+.form_answer_rate input {display: none;}
+.form_answer_rate label {cursor: pointer;}
+.form_answer_rate input:checked + label {color: #fff;border-radius: 50px;background-color: #2b2d32;height: 20px;width: 20px;display: flex;align-items: center;justify-content: center;}
+.rate_indicator {display: flex;justify-content: space-between;align-items: center;}
+.rate_indicator p {font-size: 10px;}
+.styled-textarea {width: 100%;border: none;background-image: repeating-linear-gradient(to bottom,transparent,transparent 20px,black 21px);background-size: 100% 32px;line-height: 28px;padding: 0px 8px;resize: none;font-family: inherit;font-size: 12px;margin-top: 6px;}
+.styled-textarea:focus-visible {outline: none;}
+.redemption_box {border: 1px dashed #2b2d32;border-radius: 6px;display: flex;justify-content: space-between;gap: 16px;padding: 10px 24px;align-items: center;}
+.redemption_box img {width: 80%;height: auto;}
+.redemption_id {display: flex;flex-direction: column;align-items: center;}
+.redemption_id p {font-family: "Helvetica";margin: 0;font-size: 16px;}
+.redemption_id h4 {font-family: "Helvetica";margin: 0;font-size: 30px;}
+.redemption_barcode {display: flex;justify-content: flex-end;}
+.rebaid_claim_footer_component {display: flex;justify-content: space-between;max-width: 800px;font-family: "Helvetica";margin: 0 auto;align-items: center;padding: 0 0 16px 0;}
+.rebaid_claim_footer_component img {height: 50px;width: auto;}
+@media (max-width: 768px) {
+   .complain_box_component {display: flex;gap: 24px;flex-wrap: wrap;}
+   .claim_online_box, .complain_online_box, .survey_form_box {width: calc(100% - 0px);}
+   .seperater_line {display: none;}
+   .survey_box_component {flex-wrap: wrap;}
+}
+
+.survey_table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.survey_row {
+    display: table-row;
+}
+
+.survey_cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px;
+    width: 50%;
+}
+
+.form_answer,
+.form_answer_rate {
+    display: block;
+}
+
+.form_checkbox {
+    display: inline-block;
+    margin: 6px 12px 6px 0;
+    text-align: center;
+}
+
+.form_checkbox label {
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
