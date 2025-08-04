@@ -137,10 +137,21 @@ input:checked ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
-.testimonial-custom-model-main.testimonial-model-open:has(~ .signup-custom-model-main.signup-model-open) {
-  opacity: 0;
-}
+.testimonial-custom-model-main.testimonial-model-open:has(~ .signup-custom-model-main.signup-model-open) {opacity: 0;}
 
+/* new css 04-08 */
+.account_verification_component{display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 80px 0;row-gap: 24px;max-width: 650px !important;}
+.account_verification_component .claim_title{display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap: 12px;background-image: url(../img/claim_bg_desktop.svg);background-repeat: no-repeat;}
+.account_verification_component h1 {color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 500;font-size: 48px;width: 100%;}
+.account_verification_component p {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 400;font-style: Regular;font-size: 16px;}
+.phone_number_field {max-width: 650px !important;}
+.phone_number_field .form-group{display: flex;flex-direction: column;align-items: flex-start;}
+.phone_number_field .iti--allow-dropdown {width: 100%;}
+.submit_verification_code {width: 100%;}
+.didnt_receive_code{display: flex;gap: 6px;}
+.didnt_receive_code p {font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: #2E3746;}
+.didnt_receive_code a{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;text-decoration: underline;color: #2E3746;}
+.phone_number_field{width:100%}
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
     /* testimonial CSS */
@@ -169,4 +180,7 @@ input:checked ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
     .google_signin_btn {padding: 12px 24px;font-size: 14px;}
     .seller_box, .buyer_box {padding: 20px;}
     .signin_terms{justify-content: flex-start;}
+    .account_verification_component h1 {font-size: 32px;}
+    .account_verification_component p {font-size: 14px;}
+    .account_verification_component {padding: 40px 15px !important;row-gap: 30px;max-width: 650px;}
 }
