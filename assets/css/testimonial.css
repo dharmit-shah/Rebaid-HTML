@@ -141,7 +141,7 @@ input:checked ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
 
 /* new css 04-08 */
 .account_verification_component{display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 80px 0;row-gap: 24px;max-width: 650px !important;}
-.account_verification_component .claim_title{display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap: 12px;background-image: url(../img/claim_bg_desktop.svg);background-repeat: no-repeat;}
+.account_verification_component .claim_title{display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap: 12px;background-image: url(../img/claim_bg_desktop.svg);background-repeat: no-repeat;background-repeat: no-repeat;width: 100%;align-items: flex-start;}
 .account_verification_component h1 {color: rgba(45, 54, 70, 1);font-family: Inter;font-weight: 500;font-size: 48px;width: 100%;}
 .account_verification_component p {color: rgba(102, 105, 109, 1);font-family: Inter;font-weight: 400;font-style: Regular;font-size: 16px;}
 .phone_number_field {max-width: 650px !important;}
@@ -152,6 +152,26 @@ input:checked ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
 .didnt_receive_code p {font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: #2E3746;}
 .didnt_receive_code a{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;text-decoration: underline;color: #2E3746;}
 .phone_number_field{width:100%}
+
+/* css 05/08/2025 */
+.payment_method_box{padding: 24px;background-color: rgba(248, 249, 249, 1);border-radius: 8px;width: 100%;}
+.payment_method_box h4{font-family: Inter;font-weight: 600;font-size: 18px;color: rgba(45, 54, 70, 1);width: fit-content;}
+.withdrawal_tabs_form{width: 100%;display: flex;flex-direction: column;gap: 16px;}
+.direct_deposit_box, .mailed_check_box{padding: 16px;border:1px solid rgba(235, 236, 240, 1);border-radius: 8px;display: flex;align-items: center;gap: 10px;}
+.direct_deposit_box input, .mailed_check_box input{width: 20px;height: 20px;}
+.option_box {padding: 16px;border: 1px solid rgba(235, 236, 240, 1);border-radius: 8px;display: flex;align-items: center;gap: 10px;cursor: pointer;}
+.option_box.selected {border: 1px solid rgba(0, 219, 177, 1);}
+.option_box input {width: 20px;height: 20px;margin-right: 10px;}
+.option_box label{display: flex;align-items: center;}
+.option_box input[type="radio"] {display: none;}
+.option_box label {display: flex;align-items: center;gap: 10px;cursor: pointer;position: relative;}
+.option_box label::before {content: "";display: inline-block;width: 20px;height: 20px;border: 2px solid #ccc;border-radius: 50%;background-color: white;box-sizing: border-box;}
+.option_box input[type="radio"]:checked + span::before {content: "";position: absolute;left: 0;top: 50%;transform: translateY(-50%);width: 20px;height: 20px;border: 2px solid rgba(0, 219, 177, 1);border-radius: 50%;background-color: white;}
+.option_box input[type="radio"]:checked + span::after {content: "";position: absolute;left: 5px;top: 50%;transform: translateY(-50%);width: 10px;height: 10px;background-color: rgba(0, 219, 177, 1);border-radius: 50%;}
+.directdeposit_data, .mailcheck_data{display: flex;flex-direction: column;gap: 16px;}
+.address_data{display: flex;gap: 16px;}
+.mailcheck_data label, .directdeposit_data{line-height: 28px;}
+
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
     /* testimonial CSS */
@@ -183,4 +203,6 @@ input:checked ~ label {color: rgba(0, 219, 177, 1);text-shadow: none;}
     .account_verification_component h1 {font-size: 32px;}
     .account_verification_component p {font-size: 14px;}
     .account_verification_component {padding: 40px 15px !important;row-gap: 30px;max-width: 650px;}
+    .address_data {flex-direction: column;}
+    .payment_method_box {padding: 18px;}
 }
