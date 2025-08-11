@@ -326,6 +326,70 @@ input:checked ~ .tab-content{max-height:100vh;padding:1em}
 .feature_banner_section p{font-family: Inter;font-weight: 400;font-style: Regular;font-size: 14px;color: #FFFFFFB2;}
 .shop_width{width: max-content;gap: 10px;}
 .trustpilot_rate_box .review_img{width: 100%;}
+
+/* New sfb page */
+.sfb_offer_component{padding: 60px 48px;display: flex;flex-wrap: wrap;justify-content: center;}
+.sfb_offer_section{display: flex;flex-direction: column;padding-right: 3rem;}
+.sfb_product_img img{width: 100%;height: auto;}
+.sfb_offer_content{display: flex;flex-direction: column;gap: 16px;}
+.sfb_tags_box{display: flex;gap: 16px;}
+.sfb_tag_offer{font-family: Inter;font-weight: 600;font-size: 12px;line-height: 16px;text-transform: uppercase;color: rgba(15, 23, 35, 1);background-color: rgba(249, 232, 182, 1);padding:4px 10px;border-radius: 4px;}
+.sfb_tag_discount{font-family: Inter;font-weight: 600;font-size: 12px;line-height: 16px;text-transform: uppercase;color: rgba(15, 23, 35, 1);background-color: rgba(223, 244, 237, 1);padding:4px 10px;border-radius: 4px;}
+.sfb_title h2{font-family: Inter;font-weight: 400;font-size: 30px;color: rgba(18, 18, 18, 1);}
+.sfb_desc p{font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(0, 0, 0, 0.7);}
+.sfb_price{display: flex;gap: 8px;align-items: flex-end;}
+.sfb_price h4{font-family: Inter;font-weight: 500;font-size: 32px;color: rgba(18, 18, 18, 1);}
+.sfb_price p{font-family: Inter;font-weight: 400;font-size: 14px;color: rgba(86, 86, 86, 1);}
+.sfb_discount{display: flex;gap: 14px;}
+.sfb_get_amount{background-color: rgba(246, 248, 255, 1);font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(0, 0, 0, 1);padding: 8px 16px;border-radius: 6px;}
+.sfb_accordian{display: flex;flex-direction: column;gap: 10px;}
+.sfb_tabs{overflow:hidden;}
+.sfb_tabs:first-child{overflow:hidden;border-top: 1px solid #ebecf0ff;}
+.sfb_tabs:last-child{overflow:hidden;border-top: 1px solid #ebecf0ff;border-bottom: 1px solid #ebecf0ff;}
+.sfb-tab-label{display:flex;justify-content:space-between;padding:1em 0;font-weight:700;cursor:pointer}
+.sfb-tab-label::after{content:"❯";width:1em;height:1em;text-align:center;transition:all .35s;display:none}
+.sfb-tab-content{max-height:0;padding:0 1em;color:#2c3e50;background:#fff;transition:all .35s}
+.sfb-tab-content ul li{font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(0, 0, 0, 0.6);}
+.sfb-tab-content ul li strong{font-weight: 400;color: rgba(0, 0, 0, 1);}
+.tab-close{display:flex;justify-content:flex-end;padding:1em;font-size:.75em;background:#2c3e50;cursor:pointer}
+.tab-close:hover{background:#1a252f}
+/* .sfb-tab-label{opacity:.7} */
+input:checked + .sfb-tab-label::after{transform:rotate(90deg)}
+input:checked + .sfb-tab-label{opacity:1}
+input:checked ~ .sfb-tab-content{max-height:100vh;padding:0.5em 0;}
+input:checked + .sfb-tab-label .accordian_arrow{transform: rotate(180deg);}
+#sfb_rd1,#sfb_rd2,#sfb_rd3{position:absolute;opacity:0;z-index:-1}
+.sfb_accordian_title{display: flex;gap: 1rem;align-items: center;justify-content: space-between;width: 100%;}
+.sfb_accordian_title h4{font-family:Inter;font-weight:600;font-size:16px;line-height:24px;color:#2d3646ff}
+.sfb_accordian_title p{font-family:Inter;font-weight:400;font-size:14px;line-height:24px;color:#66696dff}
+.time_red{font-family: Inter;font-weight: 400;font-size: 16px;color: rgba(163, 5, 5, 1);}
+.sfb_offer_summery_component{display: flex;flex-direction: column;gap: 1rem;}
+.sfb_product_img{border: 1px solid #ececec;border-radius: 8px;}
+/* duplicate CSS verify and delete */
+.remember_password{display: flex;justify-content: space-between;}
+.password_checkbox{display: flex;gap: 10px;}
+.custom-checkbox {display: inline-block;position: relative;cursor: pointer;user-select: none;}
+.custom-checkbox input {display: none;}
+.custom-checkbox .checkmark {display: inline-block;width: 24px;height: 24px;background-color: #fff;border: 2px solid rgba(235, 236, 240, 1);border-radius: 50px;transition: all 0.2s ease;position: relative;}
+.custom-checkbox .checkmark::after {content: "";position: absolute;display: none;}
+.custom-checkbox input:checked + .checkmark::after {display: block;left: 7px;top: 3px;width: 6px;height: 12px;border: solid rgba(45, 54, 70, 1);border: 2px solid rgba(45, 54, 70, 1);border-width: 0 2px 2px 0;transform: rotate(45deg);}
+.custom-checkbox input:checked + .checkmark {border: 2px solid rgba(45, 54, 70, 1);}
+.forget_password a{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: rgba(46, 55, 70, 1);text-decoration: none;}
+.google_signin_btn {gap:10px;border: 1px solid #00dbb1ff;border-radius: 100px;padding: 16px 24px;display: flex;align-items: center;justify-content: center;text-decoration: none;color: #2d3646ff;text-transform: uppercase;font-weight: 600;font-size: 16px;}
+.signIn_form_field{display: flex;flex-direction: column;gap: 16px;}
+.signin_buttons{display: flex;flex-direction: column;gap: 16px;}
+.signin_terms{display: flex;gap: 6px;text-align: center;align-items: center;justify-content: center;flex-wrap: wrap;line-height: 8px;}
+.signin_terms p{font-family: Inter;font-weight: 500;font-size: 14px;line-height: 16px;color: rgba(46, 55, 70, 1);}
+.signin_terms a{font-family: Inter;font-weight: 500;font-size: 14px;color: rgba(46, 55, 70, 1);}
+/* duplicate CSS end */
+@media (max-width:767px){
+  .sfb_offer_section {padding-right: 0;padding-top: 30px;width: 100%;}
+  .sfb_offer_component {gap: 24px;}
+  .sfb_discount {flex-direction: column;}
+  .sfb_offer_summery_component{padding-bottom: 30px;}
+  .sfb_get_amount {padding: 10px 16px;text-align: center;}
+  .sfb_product_img img{width: 100%;height: auto;}
+}
 /* Inbuilt CSS - Need to delete later */
 @media only screen and (max-width: 1330px) {
   .large-container {padding: 0 15px;width: 100%;}
