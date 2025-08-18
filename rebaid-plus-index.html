@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rebaid Plus Page</title>
+
+        <!-- Master Pages -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script>
+            $(function () { $("#headerPlus").load("rebaid-plus-header.html"); $("#footerPlus").load("rebaid-plus-footer.html"); });
+        </script>
+    </head>
+    <body>
+
+        <!-- Hero Section -->
+        <section class="rebaid_plus_hero_component">
+            <!-- header -->
+            <div id="headerPlus"></div>
+
+            <div class="large-container rebaid_plus_box">
+                <div class="hero_left_content">
+                    <h1>Unlock Premium Perks with <span class="highlight_plus">Rebaid+</span></h1>
+                    <p>Only $29/month for faster rewards, exclusive deals, and special extras.</p>
+                    <button type="button" class="checkout_btn join_rebaid_plus_btn">Join Rebaid+ Now</button>
+                </div>
+                <div class="hero_right_content">
+                    <img src="./assets/img/rebaid-plus-hero.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- why_rebaid_plus -->
+        <section class="large-container">
+            <div class="why_rebaid_plus_component">
+                <div class="why_rebaid_plus_title">
+                    <h2>Why <span class="highlight_plus">Rebaid+</span></h2>
+                    <p>Your membership unlocks exclusive savings, faster payments, and special rewards.</p>
+                </div>
+
+                <div class="why_rebaid_plus_big_cards">
+                    <div class="why_rebaid_plus_card">
+                        <h4>Early Access to the Best Deals</h4>
+                        <p>Be the first to grab the most in-demand offers before they sell out.</p>
+                    </div>
+                    <div class="why_rebaid_plus_card">
+                        <h4>Members-Only Exclusive Offers</h4>
+                        <p>Special discounts and promotions available only to Rebaid+ subscribers.</p>
+                    </div>
+                </div>
+
+                <div class="why_rebaid_plus_small_cards">
+                    <div class="why_rebaid_plus_card">
+                        <h4>Same-Day ACH Rebates</h4>
+                        <p>Withdraw before noon ET and get paid the same day.</p>
+                    </div>
+                    <div class="why_rebaid_plus_card">
+                        <h4>Free Shipping on Every Order</h4>
+                        <p>No minimum purchase required, ever.</p>
+                    </div>
+                    <div class="why_rebaid_plus_card">
+                        <h4>Surprise Freebies</h4>
+                        <p>Enjoy bonus gifts in select packages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- rebaid_plus_membership -->
+        <section class="large-container">
+            <div class="rebaid_plus_membership_component">
+                <div class="membership_left_content">
+                    <img src="./assets/img/rebaid-plus-logo.svg" width="110" alt="Rebaid Plus Logo">
+
+                    <div class="enroll_rebaid_plus">
+                        <img src="./assets/img/rebaid-plus-rocket.svg" width="300" height="300" alt="Rocket Icon">
+                        <div class="enroll_rebaid_plus_title">
+                            <h2>Enroll in <span class="highlight_plus">Rebaid+</span> Today</h2>
+                            <p>Select your payment method below to activate your premium membership.</p>
+                        </div>
+                    </div>
+
+                    <div class="rebaid_plus_feature_box">
+                        <div class="rebaid_plus_feature_card">
+                            <img src="./assets/img/instant-benefits-guarantee-icon.svg" alt="Instant Benefits Guarantee">
+                            <h4>Instant Benefits Guarantee</h4>
+                            <p>From day one, you'll get early deal access, faster payouts, and free shipping — or cancel anytime.</p>
+                        </div>
+                        <div class="rebaid_plus_feature_card">
+                            <img src="./assets/img/flexible-membership-icon.svg" alt="Flexible Membership">
+                            <h4>Flexible Membership</h4>
+                            <p>Pay monthly and enjoy full access without long-term commitments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="membership_right_content">
+                    <div class="membership_proice_box">
+                        <h4>Rebaid+ Membership</h4>
+                        <div class="member_price_details">
+                            <div class="price_box">
+                                <p>Price</p>
+                                <p>$29.00</p>
+                            </div>
+                            <div class="price_box">
+                                <p>Tax</p>
+                                <p>$3.00</p>
+                            </div>
+                            <div class="price_box">
+                                <p>Payment</p>
+                                <p>Monthly</p>
+                            </div>
+                        </div>
+                        <div class="member_price_total">
+                            <div class="price_total_box">
+                                <p>Total</p>
+                                <p>$32.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment_cards_box">
+                        <h4>Payment</h4>
+
+                        <form action="" class="payment_form">
+                            <!-- cards_list -->
+                            <div class="cards_list payment_cards_tab">
+                                <!-- Card -->
+                                <div class="saved_card_box payment_box payment_card_selected">
+                                    <img src="./assets/img/rebaid-plus-card.svg" alt="Card">
+                                    <p>Card</p>
+                                </div>
+                                <!-- Paypal -->
+                                <div class="saved_card_box payment_box">
+                                    <img src="./assets/img/rebaid-plus-paypal.svg" alt="Paypal">
+                                </div>
+                                <!-- Apple Pay -->
+                                <div class="add_card_box payment_box">
+                                    <img src="./assets/img/rebaid-plus-apple-pay.svg" alt="Apple Pay">
+                                </div>
+                            </div>
+
+                            <!-- credit_card_form -->
+                            <div class="flex-wrap gap-3 credit_card_form">
+                                <!-- Card number -->
+                                <div class="w-100 shipping_form_data rebaid_plus_card_data">
+                                    <div class="form-group w-100">
+                                        <label for="exampleFormControlInput1">Card number</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter your Card number" maxlength="12">
+                                    </div>
+                                    <!-- Expiration Date -->
+                                    <div class="form-group">
+                                        <label for="expiry">Expiration Date</label>
+                                        <input type="text" class="form-control" id="expiry" placeholder="MM/YY"
+                                            maxlength="5" oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                    </div>
+                                    <!-- Security Code -->
+                                    <div class="form-group">
+                                        <label for="cvv">Security Code</label>
+                                        <input type="password" class="form-control" id="cvv" placeholder="CVV"
+                                            maxlength="3" inputmode="numeric" pattern="\d{3}">
+                                    </div>
+                                </div>
+
+                                <!-- Cardholder's Name -->
+                                <div class="d-flex flex-wrap w-100 shipping_form_data justify-content-between">
+                                    <div class="form-group w-100">
+                                        <label for="exampleFormControlInput1">Cardholder's Name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter cardholder’s name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="shipping_form_data d-flex justify-content-end" id="submitBtn">
+                                <div class="w-100 form-group">
+                                    <a class="ShoppingMethod_btn" href="javascript:void(0)" title="Enroll in Rebaid+">Enroll in Rebaid+</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="info_details">
+                        <img src="./assets/img/rebaid-plus-info-circle.svg" alt="Info Icon" width="24" height="24">
+                        <p>I agree that I am enrolling in a subscription with recurring charges of $29 plus tax per month. I authorize these charges until I cancel, which I can do via my online dashboard or by contacting Rebaid customer support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div id="footerPlus"></div>
+
+        <!-- Include Inputmask via CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+        <!-- Credit Cards selection JS -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const cardBoxes = document.querySelectorAll('.saved_card_box, .add_card_box');
+                cardBoxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        cardBoxes.forEach(b => b.classList.remove('payment_card_selected'));
+                        box.classList.add('payment_card_selected');
+                    });
+                });
+            });
+            Inputmask("99/99").mask(document.getElementById("expiry"));
+        </script>
+    </body>
+</html>
